@@ -1,0 +1,52 @@
+export const collegeInfo = {
+  name: "Pak Royal College",
+  tagline: "A Place Where Futures Begin.",
+  taglineUrdu: "جہاں مستقبل کی بنیاد رکھی جاتی ہے",
+  established: 2024,
+  phone: "+92 42 3588 9900",
+  altPhone: "+92 300 1234567",
+  email: "info@pakroyalcollege.edu.pk",
+  admissionsEmail: "admissions@pakroyalcollege.edu.pk",
+  address: "Pak Royal College, Main Campus, Sharaqpur Sharif, Sheikhupura – Lahore Road, Punjab, Pakistan",
+  shortAddress: "Sharaqpur Sharif, Lahore Region, Pakistan",
+  locationName: "Pak Royal College Sharaqpur",
+  googleMapsUrl: "https://maps.app.goo.gl/G8YXKbMk2PG27gi48",
+  googleMapsEmbed: "https://maps.google.com/maps?q=Pak+Royal+College+Sharaqpur&t=&z=15&ie=UTF8&iwloc=&output=embed",
+  coordinates: {
+    lat: 31.4737014,
+    lng: 74.1158739
+  },
+  officeHours: "Monday – Saturday: 8:00 AM – 5:00 PM (Closed on Sunday)",
+  admissionsSession: "Admissions Open 2026",
+  heroBadges: [
+    "ADMISSIONS OPEN 2026",
+    "HEC & BISE Aligned Curriculum",
+    "State-of-the-Art Labs & Infrastructure",
+  ],
+  stats: [
+    { label: "Academic Programs", value: 18, suffix: "+", description: "BS Degrees & Professional Diplomas" },
+    { label: "Qualified Faculty", value: 45, suffix: "+", description: "PhD & MPhil Qualified Professors" },
+    { label: "Enrolled Students", value: 1200, suffix: "+", description: "Active future leaders" },
+    { label: "Hi-Tech Labs", value: 8, suffix: "", description: "Modern computing & research facilities" },
+    { label: "Employment Rate", value: 92, suffix: "%", description: "Graduates working or in higher study" },
+  ],
+  socials: {
+    facebook: "https://facebook.com",
+    twitter: "https://twitter.com",
+    linkedin: "https://linkedin.com",
+    instagram: "https://instagram.com",
+    youtube: "https://youtube.com",
+  },
+  quickLinks: [
+    { label: "About Us", href: "/about" },
+    { label: "BS Programs", href: "/programs/bs" },
+    { label: "Diploma Programs", href: "/programs/diploma" },
+    { label: "Short Courses", href: "/courses" },
+    { label: "Admissions 2026", href: "/admissions" },
+    { label: "Fee Structure", href: "/admissions/fees" },
+    { label: "Scholarships", href: "/admissions/scholarships" },
+    { label: "Online Application", href: "/apply" },
+    { label: "Campus Gallery", href: "/campus-life/gallery" },
+    { label: "Contact Us", href: "/contact" },
+  ]
+};
