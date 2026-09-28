@@ -160,7 +160,7 @@ export default function ContactForm() {
             <button
               type="submit"
               disabled={status === "loading"}
-              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg shadow-blue-500/25 transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold text-sm px-8 py-3.5 rounded-xl shadow-lg transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
             >
               <Send className="w-4 h-4" />
               <span>{status === "loading" ? "Submitting Inquiry..." : "Send Message"}</span>

@@ -44,7 +44,7 @@ export default function FAQAccordion({ initialCategory = "All FAQs", showSearch 
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   selectedCategory === cat
-                    ? "bg-prc-primary text-white shadow-md shadow-blue-500/20"
+                    ? "bg-prc-primary text-white shadow-md"
                     : "bg-white text-slate-600 hover:bg-slate-100 border border-slate-200"
                 }`}
               >

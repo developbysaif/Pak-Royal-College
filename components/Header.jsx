@@ -618,7 +618,7 @@ export default function Header() {
           <div className="hidden lg:flex items-center gap-3 shrink-0">
             <Link
               href="/apply"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-prc-primary via-blue-600 to-indigo-600 hover:from-prc-navy hover:via-prc-primary hover:to-blue-700 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-md shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/30 transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shrink-0"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-prc-primary via-blue-600 to-indigo-600 hover:from-prc-navy hover:via-prc-primary hover:to-blue-700 text-white font-bold px-5 py-2.5 rounded-full text-sm shadow-md hover:shadow-xl transition-all duration-300 hover:scale-[1.03] active:scale-[0.98] shrink-0"
             >
               <Sparkles className="w-4 h-4 animate-pulse" />
               <span className="whitespace-nowrap">Apply Now</span>

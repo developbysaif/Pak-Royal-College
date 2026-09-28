@@ -71,7 +71,7 @@ function CoursesContent() {
                 onClick={() => setSelectedCategory(cat)}
                 className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
                   selectedCategory === cat
-                    ? "bg-prc-primary text-white shadow-md shadow-blue-500/25 scale-105"
+                    ? "bg-prc-primary text-white shadow-md scale-105"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >

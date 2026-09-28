@@ -144,9 +144,9 @@ export default function HeroSlider() {
             priority={index === 0}
           />
 
-          {/* Dark Navy & Royal Blue Cinematic Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#142B55]/85 to-[#31549A]/30" />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A] via-transparent to-black/20" />
+          {/* Clean Dark Cinematic Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/75 to-black/35" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
         </div>
       ))}
 
@@ -196,7 +196,7 @@ export default function HeroSlider() {
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
                 href={slides[currentSlide].primaryCta.href}
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-prc-primary hover:from-blue-600 hover:to-prc-navy text-white font-extrabold px-7 py-3.5 rounded-full text-base shadow-xl shadow-blue-500/30 transition-all duration-300 hover:scale-105 active:scale-95"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-prc-primary hover:from-blue-600 hover:to-prc-navy text-white font-extrabold px-7 py-3.5 rounded-full text-base shadow-xl transition-all duration-300 hover:scale-105 active:scale-95"
               >
                 <span>{slides[currentSlide].primaryCta.label}</span>
                 <ArrowRight className="w-5 h-5" />
@@ -310,7 +310,7 @@ export default function HeroSlider() {
             onClick={() => setCurrentSlide(i)}
             className={`flex items-center gap-2 px-2.5 py-1 rounded-full text-xs font-bold transition-all duration-300 ${
               i === currentSlide
-                ? "bg-blue-500 text-white shadow-md shadow-blue-500/40 scale-105"
+                ? "bg-blue-500 text-white shadow-md scale-105"
                 : "text-white/60 hover:text-white hover:bg-white/10"
             }`}
             aria-label={`Go to slide ${s.slideNum}`}

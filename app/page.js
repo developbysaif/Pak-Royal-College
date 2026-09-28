@@ -152,7 +152,7 @@ export default function HomePage() {
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 bg-prc-primary hover:bg-prc-navy text-white font-bold px-6 py-3 rounded-full text-sm shadow-md shadow-blue-500/25 transition-all hover:scale-105"
+                className="inline-flex items-center gap-2 bg-prc-primary hover:bg-prc-navy text-white font-bold px-6 py-3 rounded-full text-sm shadow-md transition-all hover:scale-105"
               >
                 <span>Discover Our Story</span>
                 <ArrowRight className="w-4 h-4" />
@@ -272,7 +272,7 @@ export default function HomePage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
                   activeTab === tab.id
-                    ? "bg-prc-primary text-white shadow-md shadow-blue-500/25 scale-105"
+                    ? "bg-prc-primary text-white shadow-md scale-105"
                     : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
                 }`}
               >

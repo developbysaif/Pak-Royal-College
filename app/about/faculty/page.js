@@ -64,7 +64,7 @@ export default function FacultyDirectoryPage() {
                 onClick={() => setSelectedDept(dept)}
                 className={`px-4 py-2 rounded-full text-xs font-bold transition-all ${
                   selectedDept === dept
-                    ? "bg-prc-primary text-white shadow-md shadow-blue-500/25 scale-105"
+                    ? "bg-prc-primary text-white shadow-md scale-105"
                     : "bg-slate-100 text-slate-700 hover:bg-slate-200"
                 }`}
               >

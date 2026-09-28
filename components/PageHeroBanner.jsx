@@ -26,9 +26,9 @@ export default function PageHeroBanner({
           sizes="100vw"
           className="object-cover object-center scale-105"
         />
-        {/* Dark Navy & Royal Blue Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#0B1F3A]/95 via-[#142B55]/90 to-[#31549A]/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#0B1F3A]/90 via-[#0B1F3A]/30 to-black/30" />
+        {/* Clean Dark Cinematic Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/45" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -64,7 +64,7 @@ export default function PageHeroBanner({
               {primaryCta && (
                 <Link
                   href={primaryCta.href}
-                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-prc-primary hover:from-blue-600 hover:to-prc-navy text-white font-bold px-6 py-3 rounded-full text-sm shadow-lg shadow-blue-500/25 transition-all hover:scale-105 active:scale-95"
+                  className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-prc-primary hover:from-blue-600 hover:to-prc-navy text-white font-bold px-6 py-3 rounded-full text-sm shadow-lg transition-all hover:scale-105 active:scale-95"
                 >
                   {primaryCta.icon && primaryCta.icon}
                   <span>{primaryCta.label}</span>

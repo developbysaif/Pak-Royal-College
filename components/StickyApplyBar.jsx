@@ -48,7 +48,7 @@ export default function StickyApplyBar({ title, type = "program", fee, duration 
           <div className="space-y-2.5">
             <Link
               href="/apply"
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold py-3.5 px-4 rounded-2xl text-sm shadow-lg shadow-blue-500/25 transition-all hover:scale-[1.02]"
+              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold py-3.5 px-4 rounded-2xl text-sm shadow-lg transition-all hover:scale-[1.02]"
             >
               <Sparkles className="w-4 h-4" />
               <span>Apply Online Now</span>
@@ -91,7 +91,7 @@ export default function StickyApplyBar({ title, type = "program", fee, duration 
 
         <Link
           href="/apply"
-          className="bg-prc-primary text-white font-bold text-xs px-5 py-2.5 rounded-xl shrink-0 shadow-md shadow-blue-500/30 flex items-center gap-1.5"
+          className="bg-prc-primary text-white font-bold text-xs px-5 py-2.5 rounded-xl shrink-0 shadow-md flex items-center gap-1.5"
         >
           <Sparkles className="w-3.5 h-3.5" />
           <span>Apply Now</span>
