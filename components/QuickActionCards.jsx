@@ -7,44 +7,53 @@ import {
   GraduationCap,
   Download,
   PhoneCall,
-  ArrowRight
+  ArrowRight,
+  Stethoscope,
+  Gift,
+  DollarSign,
+  Award
 } from "lucide-react";
 
 const actions = [
   {
-    title: "Explore Programs",
-    description: "BS Degrees & Professional Diplomas",
-    icon: BookOpen,
-    href: "/programs",
-    color: "from-blue-600 to-indigo-700"
-  },
-  {
-    title: "Apply Now",
-    description: "Fall 2026 Online Application Form",
-    icon: Sparkles,
-    href: "/apply",
-    color: "from-indigo-600 to-blue-800"
-  },
-  {
-    title: "Admissions 2026",
-    description: "Eligibility, Criteria & Deadlines",
+    title: "BS Degrees (4 Yrs)",
+    description: "CS, AI, Software Eng & BBA Tracks",
     icon: GraduationCap,
-    href: "/admissions",
-    color: "from-blue-700 to-cyan-700"
+    badge: "HEC Aligned",
+    href: "/programs/bs",
+    color: "bg-blue-50 text-blue-700"
   },
   {
-    title: "Download Prospectus",
-    description: "Institutional Academic Handbook",
-    icon: Download,
-    href: "/admissions/requirements",
-    color: "from-slate-700 to-slate-900"
+    title: "Medical Technologies",
+    description: "F.Sc MLT, OTT, RIT & Nursing",
+    icon: Stethoscope,
+    badge: "FBISE Recognized",
+    href: "/programs/diploma",
+    color: "bg-emerald-50 text-emerald-700"
   },
   {
-    title: "Contact Admissions",
-    description: "Speak with Academic Counselors",
-    icon: PhoneCall,
-    href: "/contact",
-    color: "from-blue-800 to-indigo-900"
+    title: "Online Admission 2026",
+    description: "Fall Batch Application Form",
+    icon: Sparkles,
+    badge: "Open Now",
+    href: "/apply",
+    color: "bg-indigo-50 text-indigo-700"
+  },
+  {
+    title: "Merit Scholarships",
+    description: "Up to 100% Tuition Fee Waivers",
+    icon: Gift,
+    badge: "Financial Aid",
+    href: "/admissions/scholarships",
+    color: "bg-amber-50 text-amber-700"
+  },
+  {
+    title: "Fee Structure",
+    description: "Transparent Semester Breakdown",
+    icon: DollarSign,
+    badge: "Challan & Aid",
+    href: "/admissions/fees",
+    color: "bg-cyan-50 text-cyan-700"
   }
 ];
 
@@ -58,13 +67,19 @@ export default function QuickActionCards() {
             <Link
               key={index}
               href={act.href}
-              className="group bg-white rounded-2xl p-5 shadow-lg shadow-slate-200/80 border border-slate-200/80 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-2xl hover:border-prc-primary flex flex-col justify-between"
+              className="group bg-white rounded-2xl p-5 shadow-lg shadow-slate-200/80 border border-slate-200/80 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:border-prc-primary flex flex-col justify-between relative overflow-hidden"
             >
               <div>
-                <div className="w-12 h-12 rounded-xl bg-prc-light text-prc-primary flex items-center justify-center mb-3 transition-transform duration-300 group-hover:scale-110 group-hover:bg-prc-primary group-hover:text-white shadow-sm">
-                  <Icon className="w-6 h-6" />
+                <div className="flex items-center justify-between gap-2 mb-3">
+                  <div className={`w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:bg-prc-primary group-hover:text-white shadow-sm ${act.color}`}>
+                    <Icon className="w-6 h-6" />
+                  </div>
+                  <span className="text-[10px] font-extrabold uppercase px-2 py-0.5 rounded-full bg-slate-100 text-slate-700 border border-slate-200">
+                    {act.badge}
+                  </span>
                 </div>
-                <h3 className="font-bold text-slate-800 text-base group-hover:text-prc-primary transition-colors">
+
+                <h3 className="font-extrabold text-slate-800 text-base group-hover:text-prc-primary transition-colors">
                   {act.title}
                 </h3>
                 <p className="text-xs text-slate-500 mt-1 leading-relaxed">
@@ -73,7 +88,7 @@ export default function QuickActionCards() {
               </div>
 
               <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-prc-primary group-hover:translate-x-1 transition-transform">
-                <span>Explore</span>
+                <span>View Details</span>
                 <ArrowRight className="w-3.5 h-3.5" />
               </div>
             </Link>

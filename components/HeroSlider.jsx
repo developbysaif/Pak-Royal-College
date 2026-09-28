@@ -21,58 +21,58 @@ const slides = [
   {
     id: 1,
     slideNum: "01",
-    eyebrow: "PAK ROYAL COLLEGE",
+    eyebrow: "PAK ROYAL COLLEGE • SHARAQPUR",
     title: "Where Excellence Meets Opportunity",
     urdu: "جہاں مستقبل کی بنیاد رکھی جاتی ہے",
     description:
-      "Discover an environment designed to help students learn, grow and prepare for the future.",
+      "Affiliated with Federal Board (FBISE) and leading universities, offering quality BS degrees, intermediate sciences, and technical diplomas.",
     image: "/images/hero_campus.jpg",
-    alt: "Pak Royal College modern campus with students in Sharaqpur",
-    location: "Main Campus, Sharaqpur Sharif",
-    primaryCta: { label: "Apply Now", href: "/apply" },
+    alt: "Pak Royal College modern campus in Sharaqpur Sharif",
+    location: "Main Campus, Lal Puli Stop, Sharaqpur",
+    primaryCta: { label: "Apply for Fall 2026", href: "/apply" },
     secondaryCta: { label: "Explore Programs", href: "/programs" }
   },
   {
     id: 2,
     slideNum: "02",
-    eyebrow: "INNOVATION & TECHNOLOGY",
+    eyebrow: "AI & COMPUTING EXCELLENCE",
     title: "Learn. Innovate. Build the Future.",
-    urdu: "جدید ٹیکنالوجی اور علم کی نئی راہیں",
+    urdu: "جدید ٹیکنالوجی، کمپیوٹر سائنس اور مصنوعی ذہانت",
     description:
-      "Develop practical knowledge and modern skills for a technology-driven world.",
+      "Develop practical software mastery in high-performance computing labs with BS Computer Science, AI, and Software Engineering.",
     image: "/images/hero_ai_lab.jpg",
-    alt: "Pakistani university computer science and AI students in modern laboratory",
+    alt: "Computer science and artificial intelligence students in modern lab",
     location: "Advanced Computing & AI Lab",
-    primaryCta: { label: "Explore Programs", href: "/programs" },
-    secondaryCta: { label: "View Courses", href: "/courses" }
+    primaryCta: { label: "BS Programs (4 Yrs)", href: "/programs/bs" },
+    secondaryCta: { label: "Short Courses", href: "/courses" }
   },
   {
     id: 3,
     slideNum: "03",
-    eyebrow: "CAMPUS LIFE",
-    title: "More Than Education",
-    urdu: "روشن ماحول، دوستی اور باوقار تعلیمی تجربہ",
+    eyebrow: "MEDICAL & ALLIED HEALTH SCIENCES",
+    title: "Pioneering Healthcare Education",
+    urdu: "میڈیکل لیب ٹیکنالوجی اور ہیلتھ کیئر ڈپلوماز",
     description:
-      "Experience a campus environment where learning, friendship and personal growth come together.",
-    image: "/images/hero_graduation.jpg",
-    alt: "Pak Royal College students celebrating graduation and campus achievements",
-    location: "Student Commons & Convocation",
-    primaryCta: { label: "Explore Campus", href: "/campus-life" },
-    secondaryCta: { label: "Student Life", href: "/campus-life/student-life" }
+      "Comprehensive programs in Medical Laboratory Technology (MLT), Operation Theatre, Radiologic Imaging, and Pre-Medical sciences.",
+    image: "/images/hero_library.jpg",
+    alt: "Medical technologies and healthcare laboratory education",
+    location: "Allied Health Sciences Department",
+    primaryCta: { label: "Medical Tech Diplomas", href: "/programs/diploma" },
+    secondaryCta: { label: "Campus Facilities", href: "/campus-life" }
   },
   {
     id: 4,
     slideNum: "04",
-    eyebrow: "YOUR FUTURE STARTS HERE",
+    eyebrow: "100% MERIT SCHOLARSHIPS",
     title: "Build Skills. Create Your Future.",
     urdu: "باوقار پیشہ ورانہ مہارتیں اور روشن مستقبل",
     description:
-      "Gain knowledge, practical skills and confidence for the next chapter of your journey.",
+      "Empowering students across Punjab with generous merit-based fee waivers, industry internships, and career placement mentorship.",
     image: "/images/hero_careers.jpg",
-    alt: "Diverse group of Pakistani students in modern professional academic environment discussing future projects",
-    location: "Career Incubation & Research Center",
-    primaryCta: { label: "Start Your Journey", href: "/apply" },
-    secondaryCta: { label: "Explore Programs", href: "/programs" }
+    alt: "Pak Royal College students in academic conference",
+    location: "Career Incubation & Scholarship Center",
+    primaryCta: { label: "Check Scholarship Aid", href: "/admissions/scholarships" },
+    secondaryCta: { label: "View Fee Structure", href: "/admissions/fees" }
   }
 ];
 

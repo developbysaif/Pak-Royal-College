@@ -33,6 +33,7 @@ import FacultyCard from "@/components/FacultyCard";
 import NewsCard from "@/components/NewsCard";
 import EventCard from "@/components/EventCard";
 import StatsCounter from "@/components/StatsCounter";
+import AffiliationsBanner from "@/components/AffiliationsBanner";
 import { programs } from "@/data/programs";
 import { courses } from "@/data/courses";
 import { faculty } from "@/data/faculty";
@@ -70,6 +71,11 @@ export default function HomePage() {
       {/* SECTION 2 — QUICK ACTIONS */}
       <section>
         <QuickActionCards />
+      </section>
+
+      {/* SECTION 2.5 — RECOGNITIONS & AFFILIATIONS */}
+      <section>
+        <AffiliationsBanner />
       </section>
 
       {/* SECTION 3 — ABOUT PREVIEW */}

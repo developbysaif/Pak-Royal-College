@@ -80,6 +80,8 @@ export const metadata = {
   }
 };
 
+import FloatingWidgets from "@/components/FloatingWidgets";
+
 export default function RootLayout({ children }) {
   return (
     <html
@@ -95,6 +97,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
+        <FloatingWidgets />
       </body>
     </html>
   );

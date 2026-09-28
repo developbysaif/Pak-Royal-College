@@ -2,9 +2,47 @@
 
 import { useEffect, useState, useRef } from "react";
 import { collegeInfo } from "@/data/collegeInfo";
-import { Award, BookOpen, Users, Cpu, TrendingUp } from "lucide-react";
+import { Award, BookOpen, Users, Cpu, Star, Gift, ShieldCheck, Sparkles } from "lucide-react";
 
-const icons = [BookOpen, Award, Users, Cpu, TrendingUp];
+const statIcons = [BookOpen, Users, GraduationCapIcon, Cpu, Star, Gift];
+
+function GraduationCapIcon(props) {
+  return (
+    <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round" {...props}>
+      <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+      <path d="M6 12v5c3 3 9 3 12 0v-5" />
+    </svg>
+  );
+}
+
+function AnimatedNumber({ value, isAnimated }) {
+  const [displayValue, setDisplayValue] = useState(0);
+
+  useEffect(() => {
+    if (!isAnimated) return;
+
+    let start = 0;
+    const end = parseFloat(value);
+    const duration = 1800; // ms
+    const stepTime = 25;
+    const totalSteps = duration / stepTime;
+    const increment = end / totalSteps;
+
+    const timer = setInterval(() => {
+      start += increment;
+      if (start >= end) {
+        setDisplayValue(end);
+        clearInterval(timer);
+      } else {
+        setDisplayValue(value % 1 !== 0 ? parseFloat(start.toFixed(1)) : Math.floor(start));
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [isAnimated, value]);
+
+  return <span>{isAnimated ? displayValue : 0}</span>;
+}
 
 export default function StatsCounter() {
   const [hasAnimated, setHasAnimated] = useState(false);
@@ -17,7 +55,7 @@ export default function StatsCounter() {
           setHasAnimated(true);
         }
       },
-      { threshold: 0.2 }
+      { threshold: 0.15 }
     );
 
     if (containerRef.current) {
@@ -36,9 +74,10 @@ export default function StatsCounter() {
 
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-2">
-          <span className="px-3.5 py-1 rounded-full bg-white/10 text-blue-200 border border-white/20 text-xs font-bold uppercase tracking-wider">
-            Verified Institutional Benchmarks
-          </span>
+          <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-white/10 text-blue-200 border border-white/20 text-xs font-bold uppercase tracking-wider">
+            <Sparkles className="w-3.5 h-3.5 text-blue-300" />
+            <span>Verified Institutional Benchmarks</span>
+          </div>
           <h2 className="text-2xl sm:text-3xl font-black text-white">
             Excellence in Numbers
           </h2>
@@ -47,25 +86,25 @@ export default function StatsCounter() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
           {collegeInfo.stats.map((stat, index) => {
-            const Icon = icons[index % icons.length];
+            const Icon = statIcons[index % statIcons.length];
             return (
               <div
                 key={index}
-                className="bg-white/5 backdrop-blur-md rounded-2xl p-6 border border-white/10 text-center hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 group"
+                className="bg-white/5 backdrop-blur-md rounded-2xl p-5 border border-white/10 text-center hover:bg-white/10 hover:border-blue-400/50 transition-all duration-300 group hover:-translate-y-1"
               >
-                <div className="w-12 h-12 mx-auto mb-4 rounded-xl bg-blue-500/20 text-blue-300 flex items-center justify-center group-hover:scale-110 transition-transform">
-                  <Icon className="w-6 h-6" />
+                <div className="w-11 h-11 mx-auto mb-3 rounded-xl bg-blue-500/20 text-blue-300 flex items-center justify-center group-hover:scale-110 transition-transform border border-blue-400/20">
+                  <Icon className="w-5 h-5" />
                 </div>
-                <div className="text-3xl sm:text-4xl font-black text-white mb-1">
-                  {hasAnimated ? stat.value : "0"}
+                <div className="text-2xl sm:text-3xl font-black text-white mb-1">
+                  <AnimatedNumber value={stat.value} isAnimated={hasAnimated} />
                   <span className="text-blue-400">{stat.suffix}</span>
                 </div>
-                <div className="font-bold text-sm text-blue-200">
+                <div className="font-bold text-xs sm:text-sm text-blue-100 line-clamp-1">
                   {stat.label}
                 </div>
-                <p className="text-[11px] text-slate-400 mt-1">
+                <p className="text-[10.5px] text-slate-400 mt-1 line-clamp-2">
                   {stat.description}
                 </p>
               </div>
