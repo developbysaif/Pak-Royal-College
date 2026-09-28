@@ -7,7 +7,7 @@ export const faculty = [
     department: "Computer Science & AI",
     qualification: "PhD in Artificial Intelligence (FAST-NUCES), Postdoc (UK)",
     experience: "16+ Years Academic & Research Experience",
-    image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=800&auto=format&fit=crop",
+    image: "/images/faculty_tariq_mahmood.jpg",
     bio: "Dr. Tariq Mahmood has published over 30 research papers in top-tier IEEE and ACM journals focusing on deep learning, neural networks, and computer vision systems.",
     email: "tariq.mahmood@pakroyalcollege.edu.pk",
     specialization: ["Machine Learning", "Deep Learning", "Computer Vision", "Algorithmic Analysis"]
@@ -20,7 +20,7 @@ export const faculty = [
     department: "Software Engineering",
     qualification: "MS in Software Engineering (NUST), PEC Registered Engineer",
     experience: "10+ Years Industry & Academic Experience",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800&auto=format&fit=crop",
+    image: "/images/faculty_sarah_ahmed.jpg",
     bio: "Engr. Sarah Ahmed specializes in software quality assurance, cloud architecture, and microservices design. She has led multiple enterprise software deployments.",
     email: "sarah.ahmed@pakroyalcollege.edu.pk",
     specialization: ["Software Architecture", "Agile & DevOps", "Cloud Computing", "Quality Assurance"]
@@ -33,7 +33,7 @@ export const faculty = [
     department: "Business Administration",
     qualification: "PhD in Finance (LUMS), MBA (IBA Karachi)",
     experience: "14+ Years Corporate Advisory & Teaching",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop",
+    image: "/images/faculty_farhan_khan.jpg",
     bio: "Dr. Farhan Khan has advised leading commercial banks and regulatory bodies on corporate governance, capital market risk, and fintech innovation.",
     email: "farhan.khan@pakroyalcollege.edu.pk",
     specialization: ["Corporate Finance", "Strategic Management", "Fintech & Banking", "Business Analytics"]
@@ -46,7 +46,7 @@ export const faculty = [
     department: "Mathematics & Statistics",
     qualification: "PhD in Applied Mathematics (Punjab University)",
     experience: "18+ Years Academic Experience",
-    image: "https://images.unsplash.com/photo-1580894732414-04d3c4075127?q=80&w=800&auto=format&fit=crop",
+    image: "/images/faculty_yasmin_malik.jpg",
     bio: "Prof. Dr. Yasmin Malik specializes in numerical computing, mathematical modeling of biological processes, and differential equations.",
     email: "yasmin.malik@pakroyalcollege.edu.pk",
     specialization: ["Numerical Analysis", "Mathematical Modeling", "Calculus & Geometry", "Optimization"]

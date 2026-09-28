@@ -269,9 +269,10 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center justify-center gap-2">
             {[
               { id: "all", label: "All Programs" },
+              { id: "intermediate", label: "Intermediate (FSc / ICS / MLT)" },
               { id: "bs", label: "BS Programs (4 Yrs)" },
-              { id: "diploma", label: "Diplomas (1 Yr)" },
-              { id: "professional", label: "Professional Certifications" }
+              { id: "it-skills", label: "IT Skills & Bootcamps" },
+              { id: "diploma", label: "Diplomas (1 Yr)" }
             ].map((tab) => (
               <button
                 key={tab.id}

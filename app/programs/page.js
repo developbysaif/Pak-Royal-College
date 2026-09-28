@@ -54,9 +54,10 @@ export default function ProgramsPage() {
           <div className="flex flex-wrap items-center justify-center gap-2">
             {[
               { id: "all", label: "All Programs" },
+              { id: "intermediate", label: "Intermediate (FSc / ICS / MLT)" },
               { id: "bs", label: "BS Degrees (4 Years)" },
-              { id: "diploma", label: "1-Year Diplomas" },
-              { id: "professional", label: "Professional Certifications" }
+              { id: "it-skills", label: "IT Skills & Bootcamps" },
+              { id: "diploma", label: "1-Year Diplomas" }
             ].map((tab) => (
               <button
                 key={tab.id}
