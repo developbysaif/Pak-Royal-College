@@ -11,6 +11,13 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "500", "600", "700", "800"]
 });
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  themeColor: "#0B1F3A"
+};
+
 export const metadata = {
   metadataBase: new URL("https://pakroyalcollege.edu.pk"),
   title: {

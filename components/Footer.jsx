@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import {
@@ -60,6 +61,35 @@ function YoutubeIcon() {
 }
 
 export default function Footer() {
+  const [newsletterEmail, setNewsletterEmail] = useState("");
+  const [newsletterStatus, setNewsletterStatus] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
+  const [newsletterMessage, setNewsletterMessage] = useState("");
+
+  const handleNewsletterSubmit = async (e) => {
+    e.preventDefault();
+    if (!newsletterEmail || !newsletterEmail.includes("@")) return;
+
+    setNewsletterStatus("loading");
+    setNewsletterMessage("");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: newsletterEmail })
+      });
+      const data = await res.json();
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "Subscription failed");
+      }
+      setNewsletterStatus("success");
+      setNewsletterMessage(data.message || "Thank you for subscribing!");
+      setNewsletterEmail("");
+    } catch (err) {
+      setNewsletterStatus("error");
+      setNewsletterMessage(err.message || "Failed to subscribe.");
+    }
+  };
+
   return (
     <footer className="bg-prc-dark text-slate-300 relative overflow-hidden pt-16 pb-8 border-t border-white/10">
       {/* Background Decorative Glow */}
@@ -67,6 +97,52 @@ export default function Footer() {
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        
+        {/* Top Newsletter Bar */}
+        <div className="mb-12 p-6 sm:p-8 rounded-3xl bg-white/5 border border-white/10 flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="space-y-1 text-center md:text-left">
+            <div className="flex items-center justify-center md:justify-start gap-2 text-blue-300 text-xs font-bold uppercase tracking-wider">
+              <Sparkles className="w-4 h-4" />
+              <span>Stay Informed & Connected</span>
+            </div>
+            <h4 className="text-xl sm:text-2xl font-black text-white">
+              Subscribe to Admissions & Campus Updates
+            </h4>
+            <p className="text-xs text-slate-400">
+              Get timely notifications on merit lists, fee deadlines, scholarships, and academic seminars.
+            </p>
+          </div>
+
+          <div className="w-full md:w-auto shrink-0">
+            {newsletterStatus === "success" ? (
+              <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold bg-emerald-500/10 border border-emerald-500/30 px-4 py-3 rounded-2xl">
+                <span>✓ {newsletterMessage}</span>
+              </div>
+            ) : (
+              <form onSubmit={handleNewsletterSubmit} className="flex flex-col sm:flex-row gap-2 max-w-md w-full">
+                <input
+                  type="email"
+                  required
+                  value={newsletterEmail}
+                  onChange={(e) => setNewsletterEmail(e.target.value)}
+                  placeholder="Enter your email address..."
+                  className="px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-blue-400 min-w-[240px]"
+                />
+                <button
+                  type="submit"
+                  disabled={newsletterStatus === "loading"}
+                  className="bg-prc-primary hover:bg-blue-600 text-white font-bold text-xs px-5 py-3 rounded-xl transition-all hover:scale-105 active:scale-95 whitespace-nowrap disabled:opacity-50"
+                >
+                  {newsletterStatus === "loading" ? "Subscribing..." : "Subscribe Now"}
+                </button>
+              </form>
+            )}
+            {newsletterStatus === "error" && (
+              <p className="text-[11px] text-red-400 mt-1.5">{newsletterMessage}</p>
+            )}
+          </div>
+        </div>
+
         {/* Top Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-12 border-b border-white/10">
           {/* Column 1: Brand & Identity (2 cols on large) */}
@@ -95,7 +171,7 @@ export default function Footer() {
                 {collegeInfo.taglineUrdu}
               </p>
               <p className="text-xs text-slate-400 mt-1">
-                Empowering the next generation of engineers, data scientists, managers, and scholars with future-ready education.
+                Empowering the next generation of engineers, healthcare technicians, managers, and scholars with future-ready education.
               </p>
             </div>
 

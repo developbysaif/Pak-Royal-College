@@ -15,8 +15,9 @@ export default function ContactForm() {
   });
 
   const [status, setStatus] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
+  const [errorMessage, setErrorMessage] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.name || !formData.email || !formData.message) {
       alert("Please fill in all required fields.");
@@ -24,7 +25,19 @@ export default function ContactForm() {
     }
 
     setStatus("loading");
-    setTimeout(() => {
+    setErrorMessage("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData)
+      });
+
+      const result = await res.json();
+      if (!res.ok || !result.success) {
+        throw new Error(result.error || "Failed to submit message.");
+      }
+
       setStatus("success");
       setFormData({
         name: "",
@@ -33,7 +46,11 @@ export default function ContactForm() {
         subject: "General Admissions Inquiry",
         message: ""
       });
-    }, 1000);
+    } catch (err) {
+      console.error("Contact form error:", err);
+      setStatus("error");
+      setErrorMessage(err.message || "Failed to send message. Please try again.");
+    }
   };
 
   const handleChange = (e) => {
@@ -72,6 +89,11 @@ export default function ContactForm() {
         </div>
       ) : (
         <form onSubmit={handleSubmit} className="space-y-4">
+          {status === "error" && (
+            <div className="p-3.5 rounded-xl bg-red-50 border border-red-200 text-red-700 text-xs font-medium">
+              {errorMessage}
+            </div>
+          )}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
               <label className="block text-xs font-bold text-slate-700 mb-1">

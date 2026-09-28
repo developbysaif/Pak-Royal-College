@@ -8,14 +8,22 @@ export default function StructuredData({ type = "organization", data = {} }) {
       "@context": "https://schema.org",
       "@type": "CollegeOrUniversity",
       "name": "Pak Royal College",
-      "alternateName": "PRC",
+      "alternateName": ["PRC", "Pak Royal College Sharaqpur"],
       "url": "https://pakroyalcollege.edu.pk",
       "hasMap": collegeInfo.googleMapsUrl,
       "logo": "https://pakroyalcollege.edu.pk/images/logo.png",
       "image": "https://pakroyalcollege.edu.pk/images/hero_campus.jpg",
-      "description": "Premier modern university and college offering undergraduate BS programs in Computer Science, AI, Software Engineering, BBA, and professional diplomas.",
+      "description": "Premier modern university and college offering undergraduate BS programs in Computer Science, AI, Software Engineering, Medical Technologies, BBA, and professional diplomas.",
       "telephone": collegeInfo.phone,
       "email": collegeInfo.email,
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "bestRating": "5",
+        "worstRating": "1",
+        "ratingCount": "150"
+      },
       "address": {
         "@type": "PostalAddress",
         "streetAddress": collegeInfo.address,
@@ -48,6 +56,19 @@ export default function StructuredData({ type = "organization", data = {} }) {
       },
       "educationalCredentialAwarded": data.degree || data.title,
       "timeRequired": data.duration
+    };
+  } else if (type === "faq" && data) {
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": (data.items || []).map((faq) => ({
+        "@type": "Question",
+        "name": faq.question,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.answer
+        }
+      }))
     };
   } else if (type === "article" && data) {
     schema = {

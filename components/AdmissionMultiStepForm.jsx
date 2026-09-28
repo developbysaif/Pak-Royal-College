@@ -25,6 +25,8 @@ export default function AdmissionMultiStepForm() {
   const [currentStep, setCurrentStep] = useState(1);
   const [copied, setCopied] = useState(false);
   const [applicationId, setApplicationId] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   const [formData, setFormData] = useState({
     // Step 1: Personal
@@ -96,21 +98,47 @@ export default function AdmissionMultiStepForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleNext = () => {
+  const handleNext = async () => {
     if (validateStep(currentStep)) {
       if (currentStep === 5) {
-        // Submit
-        const randRef = `PRC-2026-${Math.floor(100000 + Math.random() * 900000)}`;
-        setApplicationId(randRef);
-        setCurrentStep(6);
-        confetti({
-          particleCount: 120,
-          spread: 80,
-          origin: { y: 0.6 }
-        });
+        // Backend API submission
+        setIsSubmitting(true);
+        setSubmitError("");
+        try {
+          const res = await fetch("/api/admissions", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(formData)
+          });
+
+          const result = await res.json();
+
+          if (!res.ok || !result.success) {
+            throw new Error(result.error || "Failed to submit application");
+          }
+
+          setApplicationId(result.applicationId);
+          setCurrentStep(6);
+          window.scrollTo({ top: 150, behavior: "smooth" });
+
+          try {
+            confetti({
+              particleCount: 120,
+              spread: 80,
+              origin: { y: 0.6 }
+            });
+          } catch (e) {
+            // ignore if canvas confetti fails
+          }
+        } catch (err) {
+          console.error("Submission failed:", err);
+          setSubmitError(err.message || "Something went wrong while connecting to the server. Please try again.");
+        } finally {
+          setIsSubmitting(false);
+        }
       } else {
         setCurrentStep((prev) => prev + 1);
-        window.scrollTo({ top: 300, behavior: "smooth" });
+        window.scrollTo({ top: 200, behavior: "smooth" });
       }
     }
   };
@@ -757,14 +785,26 @@ export default function AdmissionMultiStepForm() {
           </div>
         )}
 
+        {/* Submission Error Banner */}
+        {submitError && (
+          <div className="mt-6 p-4 rounded-xl bg-red-50 border border-red-200 flex items-start gap-3 text-red-700 text-xs">
+            <AlertCircle className="w-5 h-5 shrink-0 text-red-600 mt-0.5" />
+            <div>
+              <p className="font-bold">Submission Failed</p>
+              <p>{submitError}</p>
+            </div>
+          </div>
+        )}
+
         {/* Navigation Buttons */}
         {currentStep < 6 && (
-          <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between">
+          <div className="mt-8 pt-6 border-t border-slate-100 flex items-center justify-between gap-3">
             {currentStep > 1 ? (
               <button
                 type="button"
+                disabled={isSubmitting}
                 onClick={handleBack}
-                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 font-bold text-xs transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl border border-slate-200 text-slate-700 hover:bg-slate-50 font-bold text-xs transition-colors disabled:opacity-50"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back</span>
@@ -775,11 +815,21 @@ export default function AdmissionMultiStepForm() {
 
             <button
               type="button"
+              disabled={isSubmitting}
               onClick={handleNext}
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold text-xs sm:text-sm px-7 py-3 rounded-xl shadow-md transition-all hover:scale-105 active:scale-95"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold text-xs sm:text-sm px-7 py-3 rounded-xl shadow-md transition-all hover:scale-105 active:scale-95 disabled:opacity-50"
             >
-              <span>{currentStep === 5 ? "Submit Application" : "Proceed Next"}</span>
-              <ArrowRight className="w-4 h-4" />
+              {isSubmitting ? (
+                <>
+                  <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                  <span>Submitting to Backend...</span>
+                </>
+              ) : (
+                <>
+                  <span>{currentStep === 5 ? "Submit Application" : "Proceed Next"}</span>
+                  <ArrowRight className="w-4 h-4" />
+                </>
+              )}
             </button>
           </div>
         )}
