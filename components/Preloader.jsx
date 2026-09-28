@@ -44,36 +44,37 @@ export default function Preloader() {
       aria-hidden="true"
     >
       {/* Ambient background glow */}
-      <div className="absolute w-80 h-80 rounded-full bg-blue-600/15 blur-3xl pointer-events-none" />
+      <div className="absolute w-96 h-96 sm:w-[500px] sm:h-[500px] rounded-full bg-blue-600/20 blur-3xl pointer-events-none" />
 
-      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-sm">
+      <div className="relative z-10 flex flex-col items-center text-center px-4 max-w-lg">
         
-        {/* Animated Crest Container */}
-        <div className="relative w-28 h-28 sm:w-32 sm:h-32 mb-6 animate-pulse">
+        {/* Animated Grand Crest Container */}
+        <div className="relative w-44 h-44 sm:w-56 sm:h-56 md:w-64 md:h-64 mb-6 transition-transform duration-700 hover:scale-105">
           {/* Outer glowing pulsing ring */}
-          <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-ping opacity-30" />
+          <div className="absolute inset-0 rounded-full border-2 border-blue-400/30 animate-ping opacity-25" />
           
           <Image
             src="/images/logo-crest.png"
             alt="Pak Royal College Crest"
             fill
             priority
-            className="object-contain drop-shadow-2xl"
+            sizes="(max-width: 768px) 224px, 256px"
+            className="object-contain drop-shadow-[0_10px_30px_rgba(0,0,0,0.5)]"
           />
         </div>
 
         {/* Brand Name */}
-        <h2 className="text-xl sm:text-2xl font-black tracking-wider uppercase text-white mb-1">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-wider uppercase text-white mb-1.5">
           PAK ROYAL COLLEGE
         </h2>
         
         {/* Urdu Tagline */}
-        <p className="urdu-font text-blue-200 text-sm sm:text-base tracking-wide mb-6">
+        <p className="urdu-font text-blue-200 text-base sm:text-lg md:text-xl tracking-wide mb-6">
           جہاں مستقبل کی بنیاد رکھی جاتی ہے
         </p>
 
         {/* Progress Bar Container */}
-        <div className="w-48 sm:w-56 h-1.5 bg-white/10 rounded-full overflow-hidden relative">
+        <div className="w-56 sm:w-72 h-2 bg-white/10 rounded-full overflow-hidden relative shadow-inner">
           <div
             className="h-full bg-gradient-to-r from-blue-500 via-blue-400 to-indigo-400 rounded-full transition-all duration-150 ease-out"
             style={{ width: `${progress}%` }}
@@ -81,7 +82,7 @@ export default function Preloader() {
         </div>
 
         {/* Subtitle */}
-        <span className="text-[11px] text-slate-400 font-medium tracking-wider uppercase mt-3">
+        <span className="text-xs text-slate-400 font-semibold tracking-widest uppercase mt-3.5">
           Loading Campus Experience...
         </span>
 
