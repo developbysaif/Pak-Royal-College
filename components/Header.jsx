@@ -129,82 +129,21 @@ export default function Header() {
               Home
             </Link>
 
-            {/* About Dropdown */}
-            <div className="relative group">
-              <Link
-                href="/about"
-                className={`px-3 py-2 rounded-lg text-sm font-semibold flex items-center gap-1 transition-all whitespace-nowrap ${
-                  pathname.startsWith("/about")
-                    ? isTransparent
-                      ? "text-white bg-white/20 shadow-sm"
-                      : "text-prc-primary bg-prc-light font-bold"
-                    : isTransparent
-                    ? "text-white/90 hover:text-white hover:bg-white/10"
-                    : "text-slate-700 hover:text-prc-primary hover:bg-slate-100"
-                }`}
-              >
-                About
-                <ChevronDown className="w-4 h-4 transition-transform duration-200 group-hover:rotate-180 opacity-80" />
-              </Link>
-
-              {/* Dropdown Menu */}
-              <div className="absolute top-full left-0 w-72 pt-3 opacity-0 translate-y-2 pointer-events-none group-hover:opacity-100 group-hover:translate-y-0 group-hover:pointer-events-auto transition-all duration-200 z-50">
-                <div className="bg-white rounded-2xl shadow-2xl border border-slate-100 p-2 text-slate-800 ring-1 ring-black/5">
-                  <div className="px-3 py-2 border-b border-slate-100 mb-1">
-                    <p className="text-[11px] font-bold text-prc-primary uppercase tracking-wider">About PRC</p>
-                    <p className="text-xs text-slate-500">Excellence in higher education</p>
-                  </div>
-                  <Link
-                    href="/about"
-                    className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-prc-light hover:text-prc-primary transition-colors text-sm font-medium"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-blue-50 flex items-center justify-center text-prc-primary shrink-0">
-                      <Building className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-800">College Overview</div>
-                      <div className="text-[11px] text-slate-500">History, leadership & campus</div>
-                    </div>
-                  </Link>
-                  <Link
-                    href="/about/mission-vision"
-                    className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-prc-light hover:text-prc-primary transition-colors text-sm font-medium"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-indigo-50 flex items-center justify-center text-indigo-600 shrink-0">
-                      <Sparkles className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-800">Mission & Vision</div>
-                      <div className="text-[11px] text-slate-500">Our values & educational goal</div>
-                    </div>
-                  </Link>
-                  <Link
-                    href="/about/leadership"
-                    className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-prc-light hover:text-prc-primary transition-colors text-sm font-medium"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-cyan-50 flex items-center justify-center text-cyan-700 shrink-0">
-                      <Award className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-800">Leadership & Governance</div>
-                      <div className="text-[11px] text-slate-500">Principal & Academic Council</div>
-                    </div>
-                  </Link>
-                  <Link
-                    href="/about/faculty"
-                    className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-prc-light hover:text-prc-primary transition-colors text-sm font-medium"
-                  >
-                    <div className="w-8 h-8 rounded-lg bg-emerald-50 flex items-center justify-center text-emerald-600 shrink-0">
-                      <Users className="w-4 h-4" />
-                    </div>
-                    <div>
-                      <div className="font-semibold text-slate-800">Faculty Directory</div>
-                      <div className="text-[11px] text-slate-500">Qualified professors & mentors</div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+            {/* About */}
+            <Link
+              href="/about"
+              className={`px-3 py-2 rounded-lg text-sm font-semibold transition-all whitespace-nowrap ${
+                pathname === "/about" || pathname.startsWith("/about")
+                  ? isTransparent
+                    ? "text-white bg-white/20 shadow-sm"
+                    : "text-prc-primary bg-prc-light font-bold"
+                  : isTransparent
+                  ? "text-white/90 hover:text-white hover:bg-white/10"
+                  : "text-slate-700 hover:text-prc-primary hover:bg-slate-100"
+              }`}
+            >
+              About
+            </Link>
 
             {/* Programs Mega Menu */}
             <div className="relative group">
@@ -660,39 +599,13 @@ export default function Header() {
                 <span>Home</span>
               </Link>
 
-              {/* Mobile About Accordion */}
-              <div>
-                <button
-                  onClick={() => toggleDropdown("about")}
-                  className="w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-base font-semibold hover:bg-prc-light"
-                >
-                  <span className="flex items-center gap-2">
-                    <Building className="w-4 h-4 text-prc-primary" />
-                    About
-                  </span>
-                  <ChevronDown
-                    className={`w-4 h-4 transition-transform duration-200 ${
-                      activeDropdown === "about" ? "rotate-180 text-prc-primary" : ""
-                    }`}
-                  />
-                </button>
-                {activeDropdown === "about" && (
-                  <div className="pl-4 pr-2 py-2 space-y-1 bg-slate-50 rounded-xl my-1 border border-slate-100">
-                    <Link href="/about" className="block py-2 px-2 text-sm font-medium text-slate-700 hover:text-prc-primary">
-                      • College Overview
-                    </Link>
-                    <Link href="/about/mission-vision" className="block py-2 px-2 text-sm font-medium text-slate-700 hover:text-prc-primary">
-                      • Mission & Vision
-                    </Link>
-                    <Link href="/about/leadership" className="block py-2 px-2 text-sm font-medium text-slate-700 hover:text-prc-primary">
-                      • Leadership & Governance
-                    </Link>
-                    <Link href="/about/faculty" className="block py-2 px-2 text-sm font-medium text-slate-700 hover:text-prc-primary">
-                      • Faculty Directory
-                    </Link>
-                  </div>
-                )}
-              </div>
+              {/* Mobile About Link */}
+              <Link
+                href="/about"
+                className="flex items-center justify-between px-3 py-2.5 rounded-xl text-base font-semibold hover:bg-prc-light hover:text-prc-primary"
+              >
+                <span>About</span>
+              </Link>
 
               {/* Mobile Programs Accordion */}
               <div>
