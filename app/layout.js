@@ -71,8 +71,14 @@ export const metadata = {
     images: ["/images/logo.png"]
   },
   icons: {
-    icon: "/favicon.ico",
-    apple: "/images/logo.png"
+    icon: [
+      { url: "/images/logo.png", type: "image/png" },
+      { url: "/favicon.ico" }
+    ],
+    shortcut: "/images/logo.png",
+    apple: [
+      { url: "/images/logo.png", type: "image/png" }
+    ]
   },
   robots: {
     index: true,
@@ -88,6 +94,7 @@ export const metadata = {
 };
 
 import FloatingWidgets from "@/components/FloatingWidgets";
+import Preloader from "@/components/Preloader";
 
 export default function RootLayout({ children }) {
   return (
@@ -100,6 +107,7 @@ export default function RootLayout({ children }) {
         className="min-h-screen flex flex-col antialiased bg-prc-bg text-slate-800 selection:bg-prc-primary selection:text-white font-sans"
         suppressHydrationWarning
       >
+        <Preloader />
         <StructuredData type="organization" />
         <Header />
         <main className="flex-1">{children}</main>
