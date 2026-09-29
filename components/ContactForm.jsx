@@ -152,10 +152,10 @@ export default function ContactForm() {
                 className="w-full p-3.5 rounded-xl border border-slate-200 text-sm bg-white focus:outline-none focus:ring-2 focus:ring-prc-primary"
               >
                 <option value="General Admissions Inquiry">General Admissions Inquiry</option>
-                <option value="BS Computer Science / AI">BS Computer Science / AI</option>
-                <option value="BS Software Engineering">BS Software Engineering</option>
-                <option value="BS Business Administration">BS Business Administration</option>
-                <option value="Diploma Programs">Diploma Programs</option>
+                <option value="BS Computer Science">BS Computer Science (BSCS)</option>
+                <option value="Allied Health Sciences (OTT, RIT, DPT, MLT)">Allied Health Sciences (OTT, RIT, DPT, MLT)</option>
+                <option value="Intermediate Programs (FSc / ICS / FA)">Intermediate Programs (FSc / ICS / FA)</option>
+                <option value="2-Year Diploma Programs">2-Year Diploma Programs</option>
                 <option value="Short Courses & Bootcamps">Short Courses & Bootcamps</option>
                 <option value="Scholarships & Financial Aid">Scholarships & Financial Aid</option>
                 <option value="Campus Visit Appointment">Schedule Campus Visit</option>

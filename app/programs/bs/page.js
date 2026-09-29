@@ -10,7 +10,7 @@ import { programs } from "@/data/programs";
 export const metadata = {
   title: "BS Undergraduate Programs (4 Years) | Pak Royal College",
   description:
-    "Explore 4-year undergraduate BS degree programs at Pak Royal College in Computer Science, Artificial Intelligence, Software Engineering, IT, BBA, Mathematics, and English."
+    "Explore undergraduate BS degree programs at Pak Royal College in Computer Science, Operation Theater Technology (BS-OTT), Medical Imaging (BS-RIT), DPT, MLT, Psychology, Nursing, ADP-CS, and BS-IT."
 };
 
 export default function BsProgramsPage() {

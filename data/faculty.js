@@ -17,7 +17,7 @@ export const faculty = [
     slug: "engr-sarah-ahmed",
     name: "Engr. Sarah Ahmed",
     designation: "Associate Professor",
-    department: "Software Engineering",
+    department: "Information Technology",
     qualification: "MS in Software Engineering (NUST), PEC Registered Engineer",
     experience: "10+ Years Industry & Academic Experience",
     image: "/images/faculty_sarah_ahmed.jpg",
@@ -108,8 +108,8 @@ export const faculty = [
 export const facultyDepartments = [
   "All Departments",
   "Computer Science & AI",
-  "Software Engineering",
   "Information Technology",
+  "Allied Health Sciences",
   "Business Administration",
   "Mathematics & Statistics",
   "English & Humanities",

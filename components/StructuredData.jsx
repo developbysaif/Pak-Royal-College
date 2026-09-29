@@ -13,7 +13,7 @@ export default function StructuredData({ type = "organization", data = {} }) {
       "hasMap": collegeInfo.googleMapsUrl,
       "logo": "https://pakroyalcollege.edu.pk/images/logo.png",
       "image": "https://pakroyalcollege.edu.pk/images/hero_campus.jpg",
-      "description": "Premier modern university and college offering undergraduate BS programs in Computer Science, AI, Software Engineering, Medical Technologies, BBA, and professional diplomas.",
+      "description": "Premier modern college offering undergraduate BS programs in Computer Science, Allied Health Sciences, IT, Intermediate, and 2-year professional diplomas.",
       "telephone": collegeInfo.phone,
       "email": collegeInfo.email,
       "priceRange": "$$",

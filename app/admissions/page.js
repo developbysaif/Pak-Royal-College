@@ -67,7 +67,7 @@ export default function AdmissionsPage() {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
             {[
-              { step: "01", title: "Explore Programs", desc: "Select from our BS degrees or 1-year professional diplomas." },
+              { step: "01", title: "Explore Programs", desc: "Select from our BS degrees, intermediate or 2-year professional diplomas." },
               { step: "02", title: "Check Eligibility", desc: "Verify intermediate score benchmarks and required subjects." },
               { step: "03", title: "Submit Application", desc: "Fill out the 6-step online admission form at /apply." },
               { step: "04", title: "Application Review", desc: "Document verification and merit assessment by counselors." },

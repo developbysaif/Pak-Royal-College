@@ -7,10 +7,10 @@ export const newsArticles = [
     date: "September 20, 2026",
     author: "Admissions Directorate",
     image: "/images/news_admissions_pak.jpg",
-    excerpt: "Pak Royal College announces the commencement of online admissions for Fall 2026 across BS Computer Science, BS AI, BS Software Engineering, BBA, and professional diplomas with merit scholarships up to 100%.",
+    excerpt: "Pak Royal College announces the commencement of online admissions for Fall 2026 across BS Computer Science, Allied Health Sciences, BS-IT, and 2-year professional diplomas with merit scholarships up to 100%.",
     readTime: "4 min read",
     content: [
-      "Pak Royal College is delighted to announce that online and on-campus admissions are officially open for the Fall 2026 academic semester. Prospective candidates who have completed Intermediate (FSc / ICS / F.A / I.Com) or A-Levels are invited to apply for our four-year undergraduate degree programs and one-year professional diplomas.",
+      "Pak Royal College is delighted to announce that online and on-campus admissions are officially open for the Fall 2026 academic semester. Prospective candidates who have completed Intermediate (FSc / ICS / F.A / I.Com) or A-Levels are invited to apply for our four-year undergraduate degree programs, intermediate tracks, and two-year professional diplomas.",
       "As an institution devoted to academic excellence and futuristic technological education, Pak Royal College provides world-class laboratory infrastructure, experienced faculty mentorship, and extensive merit-based scholarship opportunities.",
       "Candidates can apply through our online admission portal at /apply or visit the Admission Office on campus between 8:00 AM and 5:00 PM (Monday to Saturday). Merit list announcements will follow the entry assessment rounds."
     ],
@@ -45,7 +45,7 @@ export const newsArticles = [
     readTime: "3 min read",
     content: [
       "In a major step toward bridging the gap between academia and industry, the Directorate of Industry Linkages at Pak Royal College formalized memorandums of understanding (MoUs) with leading national and multinational software firms.",
-      "Under this agreement, senior students in BS Computer Science, BS Software Engineering, and BS AI will participate in structured 8-week corporate internships with direct mentorship from senior tech leads.",
+      "Under this agreement, senior students in BS Computer Science, BS-IT, and computing diplomas will participate in structured 8-week corporate internships with direct mentorship from senior tech leads.",
       "The collaborating partners will also participate in college curriculum revision committees and conduct mock technical interview bootcamps on campus."
     ],
     tags: ["Industry Partnerships", "Internships", "Career Services", "Job Placement"]

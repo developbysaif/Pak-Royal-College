@@ -509,7 +509,7 @@ export default function AdmissionMultiStepForm() {
                 <div className="grid grid-cols-3 gap-2">
                   {[
                     { id: "bs", label: "BS Degree (4 Yrs)" },
-                    { id: "diploma", label: "Diploma (1 Yr)" },
+                    { id: "diploma", label: "Diploma (2 Yr)" },
                     { id: "professional", label: "Short / Professional" }
                   ].map((cat) => (
                     <button

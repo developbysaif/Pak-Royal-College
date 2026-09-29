@@ -18,7 +18,7 @@ export const events = [
     ],
     speakers: [
       { name: "Dr. Tariq Mahmood", role: "Head of AI Department, Pak Royal College", image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=400&auto=format&fit=crop" },
-      { name: "Engr. Sarah Ahmed", role: "Associate Professor of Software Engineering", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" },
+      { name: "Engr. Sarah Ahmed", role: "Associate Professor of Information Technology", image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=400&auto=format&fit=crop" },
       { name: "Malik Usman Tariq", role: "Director Industry Linkages", image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=400&auto=format&fit=crop" }
     ],
     registrationOpen: true

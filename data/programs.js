@@ -6,20 +6,20 @@ export const programs = [
     "id": "dip-it",
     "slug": "diploma-in-information-technology",
     "title": "Diploma in Information Technology (DIT)",
-    "degree": "1-Year Professional Diploma",
+    "degree": "2-Year Professional Diploma",
     "category": "diploma",
     "categoryLabel": "Diploma Program",
-    "duration": "1 Year (2 Semesters)",
+    "duration": "2 Years (4 Semesters)",
     "studyMode": "Morning / Evening / Weekend",
-    "creditHours": "36 Credit Hours",
+    "creditHours": "72 Credit Hours",
     "eligibility": "Matriculation / Intermediate or Equivalent qualification.",
     "image": "/images/course_coding.jpg",
-    "shortDescription": "Fast-track technical diploma covering office automation, web design, database administration, PC hardware, and networking fundamentals.",
-    "overview": "The Diploma in Information Technology (DIT) is an intensive 1-year career-launching program engineered to provide foundational and intermediate practical computer skills for immediate employment in corporate offices, banks, and IT support centers.",
+    "shortDescription": "Comprehensive two-year technical diploma covering office automation, web design, database administration, software programming, PC hardware, and networking fundamentals.",
+    "overview": "The Diploma in Information Technology (DIT) is an intensive 2-year career-launching program engineered to provide foundational and advanced practical computer skills for immediate employment in corporate offices, banks, and IT support centers.",
     "whyStudy": [
       {
-        "title": "Fast-Track Employability",
-        "description": "Gain in-demand practical computer skills within 12 months."
+        "title": "Comprehensive Career Readiness",
+        "description": "Gain in-demand practical computer and software skills across 2 years of rigorous training."
       },
       {
         "title": "100% Practical Lab Focus",
@@ -136,6 +136,58 @@ export const programs = [
             "type": "Networking Lab"
           }
         ]
+      },
+      {
+        "semester": "Semester 3",
+        "courses": [
+          {
+            "code": "DIT-301",
+            "title": "Programming in Python & Logic Building",
+            "credits": "4 (2+2)",
+            "type": "Programming Lab"
+          },
+          {
+            "code": "DIT-302",
+            "title": "Graphic Design & Digital Media (Canva/Photoshop)",
+            "credits": "3 (1+2)",
+            "type": "Design Lab"
+          },
+          {
+            "code": "DIT-303",
+            "title": "E-Commerce Management & Digital Marketing",
+            "credits": "3 (2+1)",
+            "type": "Applied IT"
+          },
+          {
+            "code": "DIT-304",
+            "title": "System Administration & Linux Fundamentals",
+            "credits": "3 (1+2)",
+            "type": "Systems Lab"
+          }
+        ]
+      },
+      {
+        "semester": "Semester 4",
+        "courses": [
+          {
+            "code": "DIT-401",
+            "title": "Final Capstone Project & Portfolio Development",
+            "credits": "4 (0+4)",
+            "type": "Capstone Lab"
+          },
+          {
+            "code": "DIT-402",
+            "title": "Freelancing, Upwork/Fiverr Profile Mastery",
+            "credits": "3 (1+2)",
+            "type": "Professional Skills"
+          },
+          {
+            "code": "DIT-403",
+            "title": "Industry Internship & Viva Voce",
+            "credits": "3 (0+3)",
+            "type": "Field Internship"
+          }
+        ]
       }
     ],
     "admissionRequirements": {
@@ -168,16 +220,16 @@ export const programs = [
     "id": "dip-ai",
     "slug": "diploma-in-ai-and-data-science",
     "title": "Diploma in AI & Data Science",
-    "degree": "1-Year Executive Diploma",
+    "degree": "2-Year Executive Diploma",
     "category": "diploma",
     "categoryLabel": "Diploma Program",
-    "duration": "1 Year (2 Semesters)",
+    "duration": "2 Years (4 Semesters)",
     "studyMode": "Evening / Weekend",
-    "creditHours": "36 Credit Hours",
+    "creditHours": "72 Credit Hours",
     "eligibility": "Intermediate or Bachelor's degree with basic computer literacy.",
     "image": "/images/hero_ai_lab.jpg",
-    "shortDescription": "Hands-on professional diploma in Python, Data Analytics, Power BI, Machine Learning, and Generative AI applications.",
-    "overview": "Designed for professionals and ambitious graduates, the Diploma in AI & Data Science provides practical mastery over modern machine learning tools, statistical data analytics, predictive modeling, and generative AI prompt engineering.",
+    "shortDescription": "Hands-on two-year professional diploma in Python, Data Analytics, Power BI, Machine Learning, and Generative AI applications.",
+    "overview": "Designed for professionals and ambitious graduates, the Diploma in AI & Data Science provides practical mastery over modern machine learning tools, statistical data analytics, predictive modeling, and generative AI prompt engineering over a 2-year comprehensive curriculum.",
     "whyStudy": [
       {
         "title": "Real-World Data Pipelines",
@@ -284,6 +336,52 @@ export const programs = [
             "title": "Generative AI & LLM Capstone Project",
             "credits": "4 (1+3)",
             "type": "Capstone"
+          }
+        ]
+      },
+      {
+        "semester": "Semester 3",
+        "courses": [
+          {
+            "code": "DAI-301",
+            "title": "Advanced NLP & Transformer Models",
+            "credits": "4 (2+2)",
+            "type": "Deep Learning Lab"
+          },
+          {
+            "code": "DAI-302",
+            "title": "Big Data Engineering with PySpark & Cloud Warehouses",
+            "credits": "4 (2+2)",
+            "type": "Data Systems"
+          },
+          {
+            "code": "DAI-303",
+            "title": "MLOps, Docker Containerization & Model APIs",
+            "credits": "3 (1+2)",
+            "type": "MLOps Lab"
+          }
+        ]
+      },
+      {
+        "semester": "Semester 4",
+        "courses": [
+          {
+            "code": "DAI-401",
+            "title": "Autonomous AI Agents & Multi-Modal Capstone",
+            "credits": "4 (0+4)",
+            "type": "Capstone Project"
+          },
+          {
+            "code": "DAI-402",
+            "title": "AI Ethics, Governance & Production Deployment",
+            "credits": "3 (2+1)",
+            "type": "Applied AI"
+          },
+          {
+            "code": "DAI-403",
+            "title": "Industry AI Internship & Portfolio Defense",
+            "credits": "3 (0+3)",
+            "type": "Internship"
           }
         ]
       }

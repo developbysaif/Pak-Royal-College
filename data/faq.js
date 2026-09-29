@@ -37,7 +37,7 @@ export const faqs = [
     id: "faq-5",
     category: "Academic Programs",
     question: "What is the duration of BS and Diploma programs?",
-    answer: "BS degree programs are 4 years (8 semesters), while professional diplomas range from 6 months to 1 year (2 semesters). Short courses span 8 to 12 weeks."
+    answer: "BS degree programs are 4 years (8 semesters), while professional diplomas are 2 years (4 semesters). Short courses span 8 to 12 weeks."
   },
   {
     id: "faq-6",

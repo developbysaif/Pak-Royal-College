@@ -6,7 +6,7 @@ export const feePolicies = {
 
 export const undergraduateFees = [
   {
-    program: "BS Computer Science",
+    program: "BS Computer Science (BSCS)",
     admissionFee: "PKR 25,000",
     tuitionFeePerSemester: "PKR 65,000",
     labChargesPerSemester: "PKR 6,000",
@@ -15,75 +15,93 @@ export const undergraduateFees = [
     totalSemesters: "8 Semesters (4 Years)"
   },
   {
-    program: "BS Software Engineering",
-    admissionFee: "PKR 25,000",
-    tuitionFeePerSemester: "PKR 65,000",
-    labChargesPerSemester: "PKR 6,000",
-    examFeePerSemester: "PKR 5,000",
-    totalPerSemester: "PKR 76,000",
-    totalSemesters: "8 Semesters (4 Years)"
-  },
-  {
-    program: "BS Artificial Intelligence",
-    admissionFee: "PKR 25,000",
-    tuitionFeePerSemester: "PKR 68,000",
+    program: "BS Operation Theater Technology (BS-OTT)",
+    admissionFee: "PKR 20,000",
+    tuitionFeePerSemester: "PKR 55,000",
     labChargesPerSemester: "PKR 8,000",
     examFeePerSemester: "PKR 5,000",
-    totalPerSemester: "PKR 81,000",
+    totalPerSemester: "PKR 68,000",
     totalSemesters: "8 Semesters (4 Years)"
   },
   {
-    program: "BS Information Technology",
-    admissionFee: "PKR 25,000",
-    tuitionFeePerSemester: "PKR 62,000",
-    labChargesPerSemester: "PKR 5,000",
+    program: "Radiography and Imaging Technology (BS-RIT)",
+    admissionFee: "PKR 20,000",
+    tuitionFeePerSemester: "PKR 55,000",
+    labChargesPerSemester: "PKR 8,000",
     examFeePerSemester: "PKR 5,000",
-    totalPerSemester: "PKR 72,000",
+    totalPerSemester: "PKR 68,000",
     totalSemesters: "8 Semesters (4 Years)"
   },
   {
-    program: "BS Business Administration (BBA)",
+    program: "Doctor of Physical Therapy (BS-DPT)",
     admissionFee: "PKR 25,000",
-    tuitionFeePerSemester: "PKR 58,000",
-    labChargesPerSemester: "PKR 0",
+    tuitionFeePerSemester: "PKR 60,000",
+    labChargesPerSemester: "PKR 8,000",
     examFeePerSemester: "PKR 5,000",
-    totalPerSemester: "PKR 63,000",
+    totalPerSemester: "PKR 73,000",
+    totalSemesters: "10 Semesters (5 Years)"
+  },
+  {
+    program: "Medical Laboratory Technology (BS-MLT)",
+    admissionFee: "PKR 20,000",
+    tuitionFeePerSemester: "PKR 50,000",
+    labChargesPerSemester: "PKR 6,000",
+    examFeePerSemester: "PKR 5,000",
+    totalPerSemester: "PKR 61,000",
     totalSemesters: "8 Semesters (4 Years)"
   },
   {
-    program: "BS Mathematics",
-    admissionFee: "PKR 25,000",
-    tuitionFeePerSemester: "PKR 48,000",
-    labChargesPerSemester: "PKR 0",
+    program: "BS Psychology",
+    admissionFee: "PKR 15,000",
+    tuitionFeePerSemester: "PKR 45,000",
+    labChargesPerSemester: "PKR 3,000",
     examFeePerSemester: "PKR 5,000",
     totalPerSemester: "PKR 53,000",
     totalSemesters: "8 Semesters (4 Years)"
   },
   {
-    program: "BS English",
-    admissionFee: "PKR 25,000",
-    tuitionFeePerSemester: "PKR 45,000",
-    labChargesPerSemester: "PKR 0",
+    program: "Associate Degree Program in Computer Science (ADP-CS)",
+    admissionFee: "PKR 15,000",
+    tuitionFeePerSemester: "PKR 40,000",
+    labChargesPerSemester: "PKR 5,000",
     examFeePerSemester: "PKR 5,000",
     totalPerSemester: "PKR 50,000",
+    totalSemesters: "4 Semesters (2 Years)"
+  },
+  {
+    program: "Bachelor of Science in Information Technology (BS-IT)",
+    admissionFee: "PKR 15,000",
+    tuitionFeePerSemester: "PKR 45,000",
+    labChargesPerSemester: "PKR 5,000",
+    examFeePerSemester: "PKR 5,000",
+    totalPerSemester: "PKR 55,000",
     totalSemesters: "8 Semesters (4 Years)"
+  },
+  {
+    program: "Bachelor of Science in Nursing (BSN)",
+    admissionFee: "To be announced",
+    tuitionFeePerSemester: "Coming Soon",
+    labChargesPerSemester: "—",
+    examFeePerSemester: "—",
+    totalPerSemester: "Coming Soon",
+    totalSemesters: "4 Years (Coming Soon)"
   }
 ];
 
 export const diplomaFees = [
   {
-    program: "Diploma in Information Technology (DIT - 1 Year)",
+    program: "Diploma in Information Technology (DIT - 2 Years)",
     admissionFee: "PKR 10,000",
-    totalPackage: "PKR 45,000",
+    totalPackage: "PKR 75,000",
     monthlyPlan: "PKR 8,000 / month",
-    duration: "12 Months"
+    duration: "24 Months"
   },
   {
-    program: "Diploma in AI & Data Science (1 Year)",
+    program: "Diploma in AI & Data Science (2 Years)",
     admissionFee: "PKR 15,000",
-    totalPackage: "PKR 65,000",
-    monthlyPlan: "PKR 12,000 / month",
-    duration: "12 Months"
+    totalPackage: "PKR 95,000",
+    monthlyPlan: "PKR 10,000 / month",
+    duration: "24 Months"
   },
   {
     program: "Professional Full-Stack Web Engineering (6 Months)",

@@ -39,7 +39,7 @@ const recognitions = [
   },
   {
     name: "Punjab Board of Technical Education (PBTE)",
-    subtitle: "1-Year Diplomas & IT Certifications",
+    subtitle: "2-Year Diplomas & IT Certifications",
     badge: "Coming Soon",
     isComingSoon: true,
     icon: CheckCircle2,

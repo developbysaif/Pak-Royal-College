@@ -39,7 +39,7 @@ const slides = [
     title: "Learn. Innovate. Build the Future.",
     urdu: "جدید ٹیکنالوجی، کمپیوٹر سائنس اور مصنوعی ذہانت",
     description:
-      "Develop practical software mastery in high-performance computing labs with BS Computer Science, AI, and Software Engineering.",
+      "Develop practical software mastery in high-performance computing labs with BS Computer Science, BS-IT, and ADP-CS.",
     image: "/images/hero_ai_lab.jpg",
     alt: "Computer science and artificial intelligence students in modern lab",
     location: "Advanced Computing & AI Lab",
@@ -253,7 +253,7 @@ export default function HeroSlider() {
                   <span className="font-bold text-white">4 Years (8 Semesters)</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span>1-Year IT Diplomas:</span>
+                  <span>2-Year IT Diplomas:</span>
                   <span className="font-bold text-white">Hands-On & Industry-Ready</span>
                 </div>
                 <div className="flex items-center justify-between">

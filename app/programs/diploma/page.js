@@ -8,9 +8,9 @@ import ProgramCard from "@/components/ProgramCard";
 import { programs } from "@/data/programs";
 
 export const metadata = {
-  title: "1-Year Professional Diplomas | Pak Royal College",
+  title: "2-Year Professional Diplomas | Pak Royal College",
   description:
-    "Explore 1-Year Professional Diploma Programs at Pak Royal College in Information Technology (DIT), AI & Data Science, and Computer Applications."
+    "Explore 2-Year Professional Diploma Programs at Pak Royal College in Information Technology (DIT), AI & Data Science, and Computer Applications."
 };
 
 export default function DiplomaProgramsPage() {
@@ -21,9 +21,9 @@ export default function DiplomaProgramsPage() {
       {/* Hero Section with Full-Bleed Background Image */}
       <PageHeroBanner
         title="Professional Diploma Programs"
-        badge="ONE-YEAR CAREER DIPLOMAS"
-        urdu="ایک سالہ پروفیشنل ڈپلومہ پروگرامز"
-        description="Fast-track 1-year diplomas engineered to impart high-demand practical IT and artificial intelligence skills for immediate career employment."
+        badge="TWO-YEAR CAREER DIPLOMAS"
+        urdu="دو سالہ پروفیشنل ڈپلومہ پروگرامز"
+        description="Comprehensive 2-year diplomas engineered to impart high-demand practical IT and artificial intelligence skills for immediate career employment."
         bgImage="/images/course_robotics.jpg"
         breadcrumbs={[
           { label: "Programs", href: "/programs" },

@@ -10,18 +10,18 @@ export const testimonials = [
   {
     id: "test-2",
     name: "Mahnoor Fatima",
-    program: "BS Software Engineering",
+    program: "BS Information Technology",
     batch: "Session 2024–2028",
     image: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=600&auto=format&fit=crop",
-    quote: "The emphasis on hands-on project sprints and agile team collaboration prepares you for real software houses. The college environment is motivating, disciplined, and genuinely student-centered."
+    quote: "The emphasis on hands-on networking labs, cloud infrastructure, and practical computing prepares you for real enterprise environments. The college atmosphere is genuinely student-centered."
   },
   {
     id: "test-3",
     name: "Zain Ali",
-    program: "BS Business Administration",
+    program: "BS Operation Theater Technology (BS-OTT)",
     batch: "Session 2024–2028",
     image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop",
-    quote: "The case study methodology and digital marketing mentorship at Pak Royal College gave me the exact skills to start my e-commerce brand while studying. The faculty support is unmatched."
+    quote: "Clinical hospital rotations and surgical lab instrumentation training at Pak Royal College provide outstanding real-world medical exposure. The faculty mentorship is top-notch."
   },
   {
     id: "test-4",

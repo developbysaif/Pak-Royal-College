@@ -1,5 +1,427 @@
 export const bsPrograms = [
   {
+  "id": "bs-cs",
+  "slug": "bs-computer-science",
+  "title": "BS Computer Science",
+  "degree": "Bachelor of Science in Computer Science",
+  "category": "bs",
+  "categoryLabel": "Undergraduate Program",
+  "duration": "4 Years (8 Semesters)",
+  "studyMode": "Full Time (Morning / Afternoon)",
+  "creditHours": "134 Credit Hours",
+  "eligibility": "Intermediate (FSc Pre-Engineering / ICS / General Science with Mathematics) or A-Levels with minimum 50% marks.",
+  "image": "/images/course_coding.jpg",
+  "shortDescription": "A comprehensive four-year undergraduate program focusing on computer systems, software architecture, algorithms, data engineering, and modern computing paradigms.",
+  "overview": "The Bachelor of Science in Computer Science (BSCS) at Pak Royal College provides a rigorous theoretical foundation combined with intensive practical application in modern computing technologies. Designed in alignment with national HEC guidelines and international computing standards, the curriculum equips students with deep algorithmic knowledge, systems programming expertise, software design mastery, and intelligent systems development. Students work in state-of-the-art computer laboratories, engaging in real-world problem solving, project-driven learning, and collaborative research initiatives.",
+  "whyStudy": [
+    {
+      "title": "Modern & Industry-Aligned Curriculum",
+      "description": "Continually updated to reflect the latest advancements in artificial intelligence, software engineering, cloud computing, and cybersecurity."
+    },
+    {
+      "title": "State-of-the-Art Computing Labs",
+      "description": "Equipped with high-performance workstations, cloud compute resources, and dedicated hardware for distributed systems and AI training."
+    },
+    {
+      "title": "Experienced & Research-Active Faculty",
+      "description": "Learn from accomplished professors and industry veterans who bring extensive real-world expertise into the classroom."
+    },
+    {
+      "title": "Hands-on Project Pedagogy",
+      "description": "Every core semester integrates capstone projects, coding bootcamps, and hackathons to foster practical engineering problem-solving."
+    },
+    {
+      "title": "Industry Linkages & Internships",
+      "description": "Strong partnerships with leading software houses, technology firms, and incubation centers for internships and placement support."
+    },
+    {
+      "title": "Comprehensive Career Preparation",
+      "description": "Structured career mentorship, technical interview preparation, and portfolio building to launch impactful tech careers globally."
+    }
+  ],
+  "learningOutcomes": [
+    {
+      "number": "01",
+      "title": "Computing Knowledge",
+      "description": "Demonstrate in-depth understanding of algorithmic foundations, computational theory, and hardware-software integration."
+    },
+    {
+      "number": "02",
+      "title": "Software Architecture",
+      "description": "Architect, develop, test, and deploy robust, secure, and maintainable software systems across diverse platforms."
+    },
+    {
+      "number": "03",
+      "title": "Complex Problem Solving",
+      "description": "Analyze complex technological challenges and formulate optimal algorithmic and engineering solutions."
+    },
+    {
+      "number": "04",
+      "title": "Modern Tool Mastery",
+      "description": "Proficiency in modern programming languages, development frameworks, databases, version control, and CI/CD pipelines."
+    },
+    {
+      "number": "05",
+      "title": "Research & Innovation",
+      "description": "Conduct applied computing research, investigate novel paradigms, and contribute to technological innovation."
+    },
+    {
+      "number": "06",
+      "title": "Professional Ethics & Leadership",
+      "description": "Demonstrate high ethical standards, effective team leadership, and impactful technical communication."
+    }
+  ],
+  "skills": [
+    "Data Structures & Algorithms",
+    "Full-Stack Web Development",
+    "Object-Oriented Programming (C++/Java/Python)",
+    "Database Systems & SQL/NoSQL",
+    "Operating Systems & Linux",
+    "Cloud Computing & Docker",
+    "Artificial Intelligence Fundamentals",
+    "Software Testing & Agile Methodologies"
+  ],
+  "careerPaths": [
+    {
+      "title": "Software Engineer",
+      "description": "Design, build, and maintain large-scale enterprise applications and platforms."
+    },
+    {
+      "title": "Full-Stack Developer",
+      "description": "Develop modern web and cloud applications from frontend interfaces to backend microservices."
+    },
+    {
+      "title": "Systems Analyst",
+      "description": "Analyze complex organizational IT needs and design tailored software system architectures."
+    },
+    {
+      "title": "Database Administrator",
+      "description": "Architect, optimize, and secure relational and distributed database clusters."
+    },
+    {
+      "title": "Cloud Solutions Architect",
+      "description": "Deploy scalable cloud infrastructure and serverless solutions on AWS and Azure."
+    },
+    {
+      "title": "AI / Machine Learning Engineer",
+      "description": "Build intelligent systems, predictive algorithms, and automated data pipelines."
+    }
+  ],
+  "curriculum": [
+    {
+      "semester": "Semester 1",
+      "courses": [
+        {
+          "code": "CS-101",
+          "title": "Introduction to Information & Communication Technologies",
+          "credits": "3 (2+1)",
+          "type": "Core Foundation"
+        },
+        {
+          "code": "CS-102",
+          "title": "Programming Fundamentals",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "MT-101",
+          "title": "Calculus and Analytical Geometry",
+          "credits": "3 (3+0)",
+          "type": "Mathematics"
+        },
+        {
+          "code": "EG-101",
+          "title": "English Composition & Comprehension",
+          "credits": "3 (3+0)",
+          "type": "General Education"
+        },
+        {
+          "code": "PK-101",
+          "title": "Pakistan Studies & Ideology",
+          "credits": "2 (2+0)",
+          "type": "General Education"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 2",
+      "courses": [
+        {
+          "code": "CS-103",
+          "title": "Object Oriented Programming",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-104",
+          "title": "Digital Logic Design",
+          "credits": "4 (3+1)",
+          "type": "Core Foundation"
+        },
+        {
+          "code": "MT-102",
+          "title": "Multivariable Calculus & Linear Algebra",
+          "credits": "3 (3+0)",
+          "type": "Mathematics"
+        },
+        {
+          "code": "EG-102",
+          "title": "Communication and Presentation Skills",
+          "credits": "3 (3+0)",
+          "type": "General Education"
+        },
+        {
+          "code": "IS-101",
+          "title": "Islamic Studies / Ethics",
+          "credits": "2 (2+0)",
+          "type": "General Education"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 3",
+      "courses": [
+        {
+          "code": "CS-201",
+          "title": "Data Structures & Algorithms",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-202",
+          "title": "Discrete Structures",
+          "credits": "3 (3+0)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-203",
+          "title": "Computer Organization & Assembly Language",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "MT-201",
+          "title": "Probability and Statistics",
+          "credits": "3 (3+0)",
+          "type": "Mathematics"
+        },
+        {
+          "code": "MG-201",
+          "title": "Principles of Management",
+          "credits": "3 (3+0)",
+          "type": "General Education"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 4",
+      "courses": [
+        {
+          "code": "CS-204",
+          "title": "Operating Systems",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-205",
+          "title": "Database Systems",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-206",
+          "title": "Software Engineering",
+          "credits": "3 (3+0)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-207",
+          "title": "Design & Analysis of Algorithms",
+          "credits": "3 (3+0)",
+          "type": "Domain Core"
+        },
+        {
+          "code": "EG-201",
+          "title": "Technical & Report Writing",
+          "credits": "3 (3+0)",
+          "type": "General Education"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 5",
+      "courses": [
+        {
+          "code": "CS-301",
+          "title": "Computer Networks & Communications",
+          "credits": "4 (3+1)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-302",
+          "title": "Theory of Automata & Formal Languages",
+          "credits": "3 (3+0)",
+          "type": "Domain Core"
+        },
+        {
+          "code": "CS-303",
+          "title": "Artificial Intelligence",
+          "credits": "4 (3+1)",
+          "type": "Domain Core"
+        },
+        {
+          "code": "CS-304",
+          "title": "Web Technologies & Frameworks",
+          "credits": "3 (2+1)",
+          "type": "Elective"
+        },
+        {
+          "code": "MT-301",
+          "title": "Differential Equations & Numerical Computing",
+          "credits": "3 (3+0)",
+          "type": "Mathematics"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 6",
+      "courses": [
+        {
+          "code": "CS-305",
+          "title": "Compiler Construction",
+          "credits": "3 (3+0)",
+          "type": "Domain Core"
+        },
+        {
+          "code": "CS-306",
+          "title": "Information Security & Cryptography",
+          "credits": "3 (3+0)",
+          "type": "Core Computing"
+        },
+        {
+          "code": "CS-307",
+          "title": "Mobile Application Development",
+          "credits": "3 (2+1)",
+          "type": "Elective"
+        },
+        {
+          "code": "CS-308",
+          "title": "Cloud Computing Architectures",
+          "credits": "3 (2+1)",
+          "type": "Elective"
+        },
+        {
+          "code": "MG-301",
+          "title": "Professional Ethics & Intellectual Property",
+          "credits": "3 (3+0)",
+          "type": "General Education"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 7",
+      "courses": [
+        {
+          "code": "CS-401",
+          "title": "Final Year Project — Phase I",
+          "credits": "3 (0+3)",
+          "type": "Capstone Project"
+        },
+        {
+          "code": "CS-402",
+          "title": "Data Mining & Machine Learning",
+          "credits": "3 (2+1)",
+          "type": "Elective"
+        },
+        {
+          "code": "CS-403",
+          "title": "Parallel & Distributed Computing",
+          "credits": "3 (3+0)",
+          "type": "Domain Core"
+        },
+        {
+          "code": "MG-401",
+          "title": "Entrepreneurship & Innovation",
+          "credits": "3 (3+0)",
+          "type": "General Education"
+        }
+      ]
+    },
+    {
+      "semester": "Semester 8",
+      "courses": [
+        {
+          "code": "CS-404",
+          "title": "Final Year Project — Phase II",
+          "credits": "3 (0+3)",
+          "type": "Capstone Project"
+        },
+        {
+          "code": "CS-405",
+          "title": "DevOps & Continuous Deployment",
+          "credits": "3 (2+1)",
+          "type": "Elective"
+        },
+        {
+          "code": "CS-406",
+          "title": "Human Computer Interaction",
+          "credits": "3 (3+0)",
+          "type": "Elective"
+        },
+        {
+          "code": "CS-407",
+          "title": "Industry Internship / Research Seminar",
+          "credits": "2 (0+2)",
+          "type": "Practical Experience"
+        }
+      ]
+    }
+  ],
+  "admissionRequirements": {
+    "qualification": "Intermediate (FSc Pre-Engineering / ICS / General Science with Math) or Equivalent (A-Levels, DAE in IT/Computer)",
+    "minPercentage": "Minimum 50% aggregate marks in intermediate examinations.",
+    "documents": [
+      "Matric / O-Level result card & certificate (Original & 3 attested copies)",
+      "Intermediate / A-Level result card & certificate (Original & 3 attested copies)",
+      "CNIC / B-Form copy of applicant and Father/Guardian",
+      "4 recent passport-size photographs with blue background",
+      "Equivalence certificate from IBCC (for foreign qualifications)"
+    ]
+  },
+  "fees": {
+    "admissionFee": "PKR 25,000 (One-time at admission)",
+    "tuitionFee": "PKR 65,000 per semester",
+    "examinationFee": "PKR 5,000 per semester",
+    "labFee": "PKR 6,000 per semester",
+    "totalSemesterEstimate": "PKR 76,000 per semester",
+    "note": "Fee structure is subject to official institutional guidelines and annual approval by the Academic Council."
+  },
+  "scholarships": [
+    "Merit-Based Scholarship (up to 100% tuition waiver for top scorers)",
+    "Kinship Concession (25% tuition fee waiver for siblings)",
+    "Need-Based Financial Assistance",
+    "Hafiz-e-Quran Scholarship"
+  ],
+  "faqs": [
+    {
+      "question": "What is the duration and total credit hours of BS Computer Science?",
+      "answer": "The BS Computer Science program spans 4 years divided into 8 regular academic semesters, totaling 134 credit hours."
+    },
+    {
+      "question": "Are pre-medical students eligible for BS Computer Science?",
+      "answer": "Yes, pre-medical students are eligible to apply provided they complete deficiency courses in mathematics as per HEC regulatory policy."
+    },
+    {
+      "question": "Does the program include practical software development training?",
+      "answer": "Yes, every core semester integrates hands-on lab sessions, modern programming assignments, and a rigorous two-semester final year capstone project."
+    },
+    {
+      "question": "Are internships arranged by the college?",
+      "answer": "The college Career Services and Industry Linkages Office actively coordinates internship placements with recognized technology companies."
+    }
+  ]
+},
+  {
     "id": "bs-ott",
     "slug": "bs-operation-theater-technology-ott",
     "title": "BS Operation Theater Technology (BS-OTT)",

@@ -238,7 +238,7 @@ export default function HomePage() {
                 Build Your Future With Our BS Programs
               </h2>
               <p className="text-sm text-slate-600 max-w-2xl mt-1">
-                Four-year HEC-compliant degree tracks crafted to produce industry-ready leaders in software engineering, artificial intelligence, business and science.
+                Degree tracks crafted to produce industry-ready leaders in computer science, allied health sciences, and information technology.
               </p>
             </div>
             <Link
