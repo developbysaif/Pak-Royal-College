@@ -60,6 +60,14 @@ function YoutubeIcon() {
   );
 }
 
+function TiktokIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
+      <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.29 0 .58.04.86.11V9.41a6.33 6.33 0 0 0-.86-.06 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.75a8.16 8.16 0 0 0 4.77 1.52V6.82a4.85 4.85 0 0 1-1-.13z" />
+    </svg>
+  );
+}
+
 export default function Footer() {
   const [newsletterEmail, setNewsletterEmail] = useState("");
   const [newsletterStatus, setNewsletterStatus] = useState("idle"); // 'idle' | 'loading' | 'success' | 'error'
@@ -167,7 +175,7 @@ export default function Footer() {
             </Link>
 
             <div className="p-3.5 rounded-xl bg-white/5 border border-white/10 max-w-md">
-              <p className="urdu-font text-blue-200 text-base leading-relaxed text-right">
+              <p className="urdu-font text-blue-200 text-xl sm:text-2xl leading-relaxed text-right font-medium">
                 {collegeInfo.taglineUrdu}
               </p>
               <p className="text-xs text-slate-400 mt-1">
@@ -186,24 +194,6 @@ export default function Footer() {
                 <FacebookIcon />
               </a>
               <a
-                href={collegeInfo.socials.twitter}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-prc-primary flex items-center justify-center text-white transition-colors"
-                aria-label="Twitter"
-              >
-                <TwitterIcon />
-              </a>
-              <a
-                href={collegeInfo.socials.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="w-9 h-9 rounded-full bg-white/10 hover:bg-prc-primary flex items-center justify-center text-white transition-colors"
-                aria-label="LinkedIn"
-              >
-                <LinkedinIcon />
-              </a>
-              <a
                 href={collegeInfo.socials.instagram}
                 target="_blank"
                 rel="noreferrer"
@@ -213,6 +203,15 @@ export default function Footer() {
                 <InstagramIcon />
               </a>
               <a
+                href={collegeInfo.socials.tiktok}
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-prc-primary flex items-center justify-center text-white transition-colors"
+                aria-label="TikTok"
+              >
+                <TiktokIcon />
+              </a>
+              <a
                 href={collegeInfo.socials.youtube}
                 target="_blank"
                 rel="noreferrer"
@@ -220,6 +219,15 @@ export default function Footer() {
                 aria-label="YouTube"
               >
                 <YoutubeIcon />
+              </a>
+              <a
+                href={collegeInfo.socials.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-prc-primary flex items-center justify-center text-white transition-colors"
+                aria-label="LinkedIn"
+              >
+                <LinkedinIcon />
               </a>
             </div>
           </div>
@@ -285,28 +293,43 @@ export default function Footer() {
             </h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/programs/bs-computer-science" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
-                  BS Computer Science
+                <Link href="/programs/bs-operation-theater-technology-ott" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  BS Operation Theater (OTT)
                 </Link>
               </li>
               <li>
-                <Link href="/programs/bs-artificial-intelligence" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
-                  BS Artificial Intelligence
+                <Link href="/programs/radiography-and-imaging-technology-bs-rit" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  Radiography & Imaging (BS-RIT)
                 </Link>
               </li>
               <li>
-                <Link href="/programs/bs-software-engineering" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
-                  BS Software Engineering
+                <Link href="/programs/doctor-of-physical-therapy-bs-dpt" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  Doctor of Physical Therapy (DPT)
+                </Link>
+              </li>
+              <li>
+                <Link href="/programs/medical-laboratory-technology-bs-mlt" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  Medical Laboratory Tech (BS-MLT)
+                </Link>
+              </li>
+              <li>
+                <Link href="/programs/bs-psychology" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  BS Psychology
+                </Link>
+              </li>
+              <li>
+                <Link href="/programs/bachelor-of-science-in-nursing-bsn" className="text-amber-400 hover:text-amber-300 transition-colors hover:translate-x-1 inline-block font-semibold">
+                  BS Nursing (BSN - Coming Soon)
+                </Link>
+              </li>
+              <li>
+                <Link href="/programs/adp-computer-science" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  Associate Degree in CS (ADP-CS)
                 </Link>
               </li>
               <li>
                 <Link href="/programs/bs-information-technology" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
-                  BS Information Technology
-                </Link>
-              </li>
-              <li>
-                <Link href="/programs/bs-business-administration" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
-                  BBA Business Administration
+                  BS Information Technology (BS-IT)
                 </Link>
               </li>
               <li>

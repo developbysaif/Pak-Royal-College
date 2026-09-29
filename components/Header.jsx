@@ -178,40 +178,40 @@ export default function Header() {
 
                     <div className="space-y-1">
                       <Link
-                        href="/programs/bs-computer-science"
+                        href="/programs/bs-operation-theater-technology-ott"
                         className="group/item flex items-center justify-between p-2 rounded-lg hover:bg-prc-light transition-colors"
                       >
                         <div>
                           <div className="text-xs font-bold text-slate-800 group-hover/item:text-prc-primary">
-                            BS Computer Science
+                            BS Operation Theater (OTT)
                           </div>
-                          <p className="text-[11px] text-slate-500">Software, Algorithms & Systems</p>
+                          <p className="text-[11px] text-slate-500">Surgical Technology & Critical Care</p>
                         </div>
                         <ArrowRight className="w-3.5 h-3.5 text-prc-primary opacity-0 group-hover/item:opacity-100 transition-all -translate-x-1 group-hover/item:translate-x-0" />
                       </Link>
 
                       <Link
-                        href="/programs/bs-artificial-intelligence"
+                        href="/programs/doctor-of-physical-therapy-bs-dpt"
                         className="group/item flex items-center justify-between p-2 rounded-lg hover:bg-prc-light transition-colors"
                       >
                         <div>
                           <div className="text-xs font-bold text-slate-800 group-hover/item:text-prc-primary">
-                            BS Artificial Intelligence
+                            Doctor of Physical Therapy (DPT)
                           </div>
-                          <p className="text-[11px] text-slate-500">Machine Learning & Neural Nets</p>
+                          <p className="text-[11px] text-slate-500">5-Year Clinical Doctor Degree</p>
                         </div>
                         <ArrowRight className="w-3.5 h-3.5 text-prc-primary opacity-0 group-hover/item:opacity-100 transition-all -translate-x-1 group-hover/item:translate-x-0" />
                       </Link>
 
                       <Link
-                        href="/programs/bs-software-engineering"
+                        href="/programs/radiography-and-imaging-technology-bs-rit"
                         className="group/item flex items-center justify-between p-2 rounded-lg hover:bg-prc-light transition-colors"
                       >
                         <div>
                           <div className="text-xs font-bold text-slate-800 group-hover/item:text-prc-primary">
-                            BS Software Engineering
+                            Radiography & Imaging (BS-RIT)
                           </div>
-                          <p className="text-[11px] text-slate-500">Enterprise App Architecture</p>
+                          <p className="text-[11px] text-slate-500">CT, MRI & Diagnostic Ultrasound</p>
                         </div>
                         <ArrowRight className="w-3.5 h-3.5 text-prc-primary opacity-0 group-hover/item:opacity-100 transition-all -translate-x-1 group-hover/item:translate-x-0" />
                       </Link>
@@ -240,7 +240,7 @@ export default function Header() {
                         className="group/item block p-2.5 rounded-xl bg-slate-50 hover:bg-prc-light transition-colors"
                       >
                         <div className="font-bold text-xs text-slate-800 group-hover/item:text-prc-primary flex items-center justify-between">
-                          <span>1-Year Diplomas (DIT, AI)</span>
+                          <span>2-Year Diplomas (DIT, AI)</span>
                           <ArrowRight className="w-3.5 h-3.5 text-prc-primary opacity-0 group-hover/item:opacity-100 transition-all" />
                         </div>
                         <p className="text-[11px] text-slate-500 mt-0.5">Practical, hands-on career foundation</p>
@@ -631,17 +631,20 @@ export default function Header() {
                     <Link href="/programs/bs" className="block py-1.5 px-2 text-sm text-slate-700 hover:text-prc-primary">
                       • BS Degrees (4 Years)
                     </Link>
-                    <Link href="/programs/bs-computer-science" className="block py-1.5 px-3 text-xs text-slate-600 hover:text-prc-primary">
-                      - BS Computer Science
+                    <Link href="/programs/bs-operation-theater-technology-ott" className="block py-1.5 px-3 text-xs text-slate-600 hover:text-prc-primary">
+                      - BS Operation Theater (OTT)
                     </Link>
-                    <Link href="/programs/bs-artificial-intelligence" className="block py-1.5 px-3 text-xs text-slate-600 hover:text-prc-primary">
-                      - BS Artificial Intelligence
+                    <Link href="/programs/doctor-of-physical-therapy-bs-dpt" className="block py-1.5 px-3 text-xs text-slate-600 hover:text-prc-primary">
+                      - Doctor of Physical Therapy (DPT)
                     </Link>
-                    <Link href="/programs/bs-software-engineering" className="block py-1.5 px-3 text-xs text-slate-600 hover:text-prc-primary">
-                      - BS Software Engineering
+                    <Link href="/programs/radiography-and-imaging-technology-bs-rit" className="block py-1.5 px-3 text-xs text-slate-600 hover:text-prc-primary">
+                      - Radiography & Imaging (BS-RIT)
+                    </Link>
+                    <Link href="/programs/bachelor-of-science-in-nursing-bsn" className="block py-1.5 px-3 text-xs text-amber-600 hover:text-amber-700 font-semibold">
+                      - BS Nursing (BSN - Coming Soon)
                     </Link>
                     <Link href="/programs/diploma" className="block py-1.5 px-2 text-sm text-slate-700 hover:text-prc-primary">
-                      • 1-Year Diplomas (DIT, AI)
+                      • 2-Year Diplomas (DIT, AI)
                     </Link>
                     <Link href="/programs/professional" className="block py-1.5 px-2 text-sm text-slate-700 hover:text-prc-primary">
                       • Professional Certifications

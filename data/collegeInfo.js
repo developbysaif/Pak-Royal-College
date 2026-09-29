@@ -4,14 +4,15 @@ export const collegeInfo = {
   tagline: "A Place Where Futures Begin.",
   taglineUrdu: "جہاں مستقبل کی بنیاد رکھی جاتی ہے",
   established: 2024,
-  phone: "0311-1444810",
-  phoneFormatted: "+92 311 1444 810",
-  altPhone: "+92 42 3588 9900",
+  phone: "03 111 444 810",
+  phoneFormatted: "03 111 444 810",
+  altPhone: "0371 4644032",
   whatsapp: "+92 311 1444 810",
   whatsappLink: "https://wa.me/923111444810?text=Hello%20Pak%20Royal%20College,%20I%20want%20information%20about%20Admissions%202026",
   email: "info@pakroyalcollege.edu.pk",
+  altEmail: "pakroyalcollege@gmail.com",
   admissionsEmail: "admissions@pakroyalcollege.edu.pk",
-  address: "Lal Puli Stop, Jaranwala Road (Opposite Saeed Public School), Sharaqpur Sharif, District Sheikhupura, Punjab, Pakistan",
+  address: "Lal Puli Stop, Jaranwala Road, Sharaqpur Sharif, District Sheikhupura, Punjab, Pakistan",
   shortAddress: "Lal Puli Stop, Jaranwala Road, Sharaqpur Sharif",
   locationName: "Pak Royal College Main Campus, Sharaqpur Sharif",
   googleRating: 4.9,
@@ -29,8 +30,8 @@ export const collegeInfo = {
     { name: "Federal Board (FBISE)", desc: "Affiliated for Intermediate & Medical Tech", icon: "Award" },
     { name: "Govt College University Faisalabad (GCUF)", desc: "Degree Affiliation & Academic Collaboration", icon: "GraduationCap" },
     { name: "University of Okara", desc: "Recognized Higher Education Partner", icon: "Building2" },
-    { name: "Higher Education Commission (HEC)", desc: "HEC Aligned Degree Framework & Curriculum", icon: "ShieldCheck" },
-    { name: "Punjab Board of Technical Education (PBTE)", desc: "Technical Diplomas & Vocational Certifications", icon: "CheckCircle2" }
+    { name: "Higher Education Commission (HEC)", desc: "HEC Aligned Degree Framework (Coming Soon)", icon: "ShieldCheck", status: "Coming Soon" },
+    { name: "Punjab Board of Technical Education (PBTE)", desc: "Technical Diplomas & IT Certifications (Coming Soon)", icon: "CheckCircle2", status: "Coming Soon" }
   ],
   heroBadges: [
     "ADMISSIONS OPEN FALL 2026",
@@ -39,18 +40,19 @@ export const collegeInfo = {
     "Up to 100% Merit Scholarships"
   ],
   stats: [
-    { label: "Academic Programs", value: 18, suffix: "+", description: "BS Degrees, Intermediate & Diplomas" },
-    { label: "Qualified Faculty", value: 45, suffix: "+", description: "PhD Scholars & Industry Practitioners" },
-    { label: "Enrolled Students", value: 1200, suffix: "+", description: "Future leaders on campus" },
-    { label: "Hi-Tech Laboratories", value: 8, suffix: "", description: "Computing, Medical & AI Labs" },
+    { label: "Academic Programs", value: 22, suffix: "+", description: "BS Degrees, Intermediate & Diplomas" },
+    { label: "Qualified Faculty", value: 19, suffix: "+", description: "PhD Scholars & Industry Practitioners" },
+    { label: "Enrolled Students", value: 300, suffix: "+", description: "Future leaders on campus" },
+    { label: "Hi-Tech Laboratories", value: 11, suffix: "", description: "Computing, Medical & AI Labs" },
     { label: "Google Rating", value: 4.9, suffix: "★", description: "150+ Verified Student Reviews" },
-    { label: "Scholarships Awarded", value: 100, suffix: "%", description: "Up to 100% Need & Merit Waivers" }
+    { label: "Result", value: 100, suffix: "%", description: "Board & Examination Pass Rate" }
   ],
   socials: {
-    facebook: "https://facebook.com/pakroyalcollegesharaqpur",
-    instagram: "https://instagram.com/pakroyalcollege",
-    linkedin: "https://linkedin.com/company/pakroyalcollege",
-    youtube: "https://youtube.com/@pakroyalcollege",
+    facebook: "https://www.facebook.com/PakRoyalCollege/",
+    instagram: "https://www.instagram.com/pakroyalcollege/",
+    tiktok: "https://www.tiktok.com/@pakroyalcollege.edu",
+    youtube: "https://www.youtube.com/@PakRoyalCollege-edu",
+    linkedin: "https://www.linkedin.com/company/pak-royal-college-sharaqpur",
     whatsapp: "https://wa.me/923111444810"
   },
   quickLinks: [

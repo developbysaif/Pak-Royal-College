@@ -4,21 +4,33 @@ import Link from "next/link";
 import { Sparkles, Download, PhoneCall, CheckCircle2, ShieldCheck } from "lucide-react";
 import { collegeInfo } from "@/data/collegeInfo";
 
-export default function StickyApplyBar({ title, type = "program", fee, duration }) {
+export default function StickyApplyBar({ title, type = "program", fee, duration, isComingSoon = false }) {
   return (
     <>
       {/* Desktop Right Sidebar Card */}
       <aside className="hidden lg:block w-full sticky top-28">
         <div className="bg-white rounded-3xl p-6 shadow-xl border border-slate-200 space-y-6">
           <div className="space-y-2">
-            <span className="bg-blue-50 text-prc-primary font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
-              Admissions Open 2026
-            </span>
+            {isComingSoon ? (
+              <span className="inline-flex items-center gap-1.5 bg-amber-100 text-amber-800 font-extrabold text-xs px-3 py-1 rounded-full uppercase tracking-wider border border-amber-300">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-600 opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-amber-600"></span>
+                </span>
+                Admissions Coming Soon
+              </span>
+            ) : (
+              <span className="bg-blue-50 text-prc-primary font-bold text-xs px-3 py-1 rounded-full uppercase tracking-wider">
+                Admissions Open 2026
+              </span>
+            )}
             <h3 className="font-extrabold text-2xl text-prc-navy">
-              Ready to Start?
+              {isComingSoon ? "Interested in BSN?" : "Ready to Start?"}
             </h3>
             <p className="text-xs text-slate-500">
-              Begin your academic journey at Pak Royal College today.
+              {isComingSoon
+                ? "Pre-register your interest to receive immediate alerts when admissions open."
+                : "Begin your academic journey at Pak Royal College today."}
             </p>
           </div>
 
@@ -46,13 +58,23 @@ export default function StickyApplyBar({ title, type = "program", fee, duration 
           </div>
 
           <div className="space-y-2.5">
-            <Link
-              href="/apply"
-              className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold py-3.5 px-4 rounded-2xl text-sm shadow-lg transition-all hover:scale-[1.02]"
-            >
-              <Sparkles className="w-4 h-4" />
-              <span>Apply Online Now</span>
-            </Link>
+            {isComingSoon ? (
+              <Link
+                href="/contact"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-bold py-3.5 px-4 rounded-2xl text-sm shadow-lg transition-all hover:scale-[1.02]"
+              >
+                <PhoneCall className="w-4 h-4" />
+                <span>Inquire / Pre-Register</span>
+              </Link>
+            ) : (
+              <Link
+                href="/apply"
+                className="w-full flex items-center justify-center gap-2 bg-gradient-to-r from-prc-primary to-blue-600 hover:from-prc-navy hover:to-prc-primary text-white font-bold py-3.5 px-4 rounded-2xl text-sm shadow-lg transition-all hover:scale-[1.02]"
+              >
+                <Sparkles className="w-4 h-4" />
+                <span>Apply Online Now</span>
+              </Link>
+            )}
 
             <Link
               href="/admissions"
@@ -84,18 +106,28 @@ export default function StickyApplyBar({ title, type = "program", fee, duration 
           <div className="text-xs font-extrabold text-prc-navy truncate">
             {title}
           </div>
-          <div className="text-[11px] text-emerald-600 font-semibold">
-            Admissions Open 2026
+          <div className={`text-[11px] font-semibold ${isComingSoon ? "text-amber-600" : "text-emerald-600"}`}>
+            {isComingSoon ? "Admissions Coming Soon" : "Admissions Open 2026"}
           </div>
         </div>
 
-        <Link
-          href="/apply"
-          className="bg-prc-primary text-white font-bold text-xs px-5 py-2.5 rounded-xl shrink-0 shadow-md flex items-center gap-1.5"
-        >
-          <Sparkles className="w-3.5 h-3.5" />
-          <span>Apply Now</span>
-        </Link>
+        {isComingSoon ? (
+          <Link
+            href="/contact"
+            className="bg-amber-500 text-white font-bold text-xs px-5 py-2.5 rounded-xl shrink-0 shadow-md flex items-center gap-1.5"
+          >
+            <PhoneCall className="w-3.5 h-3.5" />
+            <span>Inquire</span>
+          </Link>
+        ) : (
+          <Link
+            href="/apply"
+            className="bg-prc-primary text-white font-bold text-xs px-5 py-2.5 rounded-xl shrink-0 shadow-md flex items-center gap-1.5"
+          >
+            <Sparkles className="w-3.5 h-3.5" />
+            <span>Apply Now</span>
+          </Link>
+        )}
       </div>
     </>
   );

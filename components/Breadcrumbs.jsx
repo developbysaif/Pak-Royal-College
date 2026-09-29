@@ -31,15 +31,15 @@ export default function Breadcrumbs({ items = [] }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <nav aria-label="Breadcrumb" className="py-3 px-4 sm:px-0">
-        <ol className="flex items-center flex-wrap gap-2 text-xs sm:text-sm text-slate-500 font-medium">
+      <nav aria-label="Breadcrumb" className="py-2.5">
+        <ol className="inline-flex items-center flex-wrap gap-2 text-xs sm:text-sm font-medium px-3.5 py-1.5 rounded-full bg-black/45 backdrop-blur-md border border-white/20 text-slate-200 shadow-md">
           <li>
             <Link
               href="/"
-              className="flex items-center gap-1 text-slate-500 hover:text-prc-primary transition-colors"
+              className="flex items-center gap-1.5 text-slate-200 hover:text-white transition-colors"
             >
-              <Home className="w-3.5 h-3.5" />
-              <span className="sr-only">Home</span>
+              <Home className="w-3.5 h-3.5 text-blue-300" />
+              <span>Home</span>
             </Link>
           </li>
 
@@ -47,15 +47,15 @@ export default function Breadcrumbs({ items = [] }) {
             const isLast = index === items.length - 1;
             return (
               <li key={index} className="flex items-center gap-2">
-                <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
+                <ChevronRight className="w-3.5 h-3.5 text-slate-300 shrink-0" />
                 {isLast || !item.href ? (
-                  <span className="text-prc-navy font-bold truncate max-w-[200px] sm:max-w-none" aria-current="page">
+                  <span className="text-white font-bold truncate max-w-[200px] sm:max-w-none drop-shadow" aria-current="page">
                     {item.label}
                   </span>
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-slate-600 hover:text-prc-primary transition-colors truncate max-w-[150px] sm:max-w-none"
+                    className="text-slate-200 hover:text-white transition-colors truncate max-w-[150px] sm:max-w-none"
                   >
                     {item.label}
                   </Link>

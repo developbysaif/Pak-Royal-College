@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { collegeInfo } from "@/data/collegeInfo";
 import { Award, BookOpen, Users, Cpu, Star, Gift, ShieldCheck, Sparkles } from "lucide-react";
 
-const statIcons = [BookOpen, Users, GraduationCapIcon, Cpu, Star, Gift];
+const statIcons = [BookOpen, Users, GraduationCapIcon, Cpu, Star, Award];
 
 function GraduationCapIcon(props) {
   return (

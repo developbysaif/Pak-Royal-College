@@ -7,7 +7,7 @@ export const events = [
     date: "October 18–19, 2026",
     time: "9:00 AM – 5:00 PM (Next Day)",
     location: "Main Auditorium & Computing Hub, Pak Royal College",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/event_hackathon_pak.jpg",
     shortDescription: "A national tech symposium featuring keynote sessions from Silicon Valley tech founders, followed by a high-octane 24-hour coding hackathon with PKR 200,000 in cash prizes.",
     overview: "The Royal Tech Summit 2026 is Pak Royal College's flagship technological gathering. It unites visionary tech innovators, artificial intelligence researchers, startup founders, and student developers for an immersive two-day event featuring thought-provoking keynotes, tech masterclasses, and an intense 24-hour software build sprint.",
     schedule: [
@@ -31,7 +31,7 @@ export const events = [
     date: "November 05, 2026",
     time: "10:00 AM – 2:00 PM",
     location: "Main Campus Green Lawns & Executive Hall",
-    image: "https://images.unsplash.com/photo-1523580494863-6f3031224c94?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/event_orientation_pak.jpg",
     shortDescription: "Welcoming all newly admitted undergraduate and diploma students to Pak Royal College with campus tours, department briefings, society registrations, and faculty meetups.",
     overview: "Freshmen Orientation Day is designed to help incoming students transition smoothly into college life. Learn about academic rules, lab safety, library resources, student societies, sports clubs, and mentorship opportunities.",
     schedule: [

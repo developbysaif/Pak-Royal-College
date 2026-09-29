@@ -500,5 +500,79 @@ export const courses = [
     faqs: [
       { question: "How many mock tests are included?", answer: "The course includes 4 full-length diagnostic mock examinations with detailed individual feedback." }
     ]
+  },
+  {
+    id: "crs-fb-yt-monetization",
+    slug: "facebook-and-youtube-monetization",
+    title: "Facebook & YouTube Monetization Masterclass",
+    category: "Technical",
+    categoryLabel: "Creative & Digital Media",
+    duration: "12 Weeks (3 Months)",
+    level: "Beginner to Advanced",
+    mode: "Hybrid (Campus & Online)",
+    classesPerWeek: "3 Classes / Week (2 Hours each)",
+    timing: "Evening: 5:00 PM – 7:00 PM / Weekend",
+    image: "/images/course_monetization.jpg",
+    shortDescription: "Master content creation, video editing, algorithm growth strategies, and revenue generation through Facebook Stars, In-Stream Ads, and YouTube Partner Program.",
+    overview: "This 12-week comprehensive masterclass equips aspiring creators, freelancers, and digital marketers with end-to-end skills to build, scale, and monetize video channels on Facebook and YouTube. From high-CPM niche selection and viral video editing in CapCut and Premiere Pro to algorithm SEO, copyright compliance, and international payment setups via Payoneer and direct wire, you will launch live monetized content assets.",
+    whatYouWillLearn: [
+      { title: "High-CPM Niche Research", description: "Discover lucrative niches with high advertiser demand and audience engagement." },
+      { title: "Mobile & Studio Video Production", description: "Lighting, audio, camera framing, and mobile smartphone content production." },
+      { title: "Viral Video Editing", description: "Master pacing, sound design, auto-captions, and retention editing in CapCut & Premiere Pro." },
+      { title: "High-CTR Thumbnail Design", description: "Design eye-catching thumbnails with Photoshop and Canva that boost click-through rates." },
+      { title: "Channel SEO & Algorithm Growth", description: "Leverage tags, keywords, search intent, and YouTube/Facebook suggestion algorithms." },
+      { title: "Monetization & Global Payouts", description: "Set up AdSense, Payoneer, international banking, brand sponsorships, and merchandise." }
+    ],
+    modules: [
+      {
+        number: "01",
+        title: "Niche Selection & Channel Architecture",
+        description: "Setting up professional creator profiles, competitor audits, and content calendars.",
+        topics: ["High-CPM Niches", "Channel Branding & Artwork", "Audience Research", "Content Planning"],
+        practicalTask: "Set up and brand a fully configured YouTube Channel & Facebook Creator Page."
+      },
+      {
+        number: "02",
+        title: "Production & Viral Video Editing",
+        description: "Hands-on editing techniques to maximize average view duration and audience retention.",
+        topics: ["CapCut & Premiere Pro", "Pacing & Sound Effects", "Dynamic Captions & B-Roll", "AI Voiceovers & Scripting"],
+        practicalTask: "Produce and edit 3 viral-format short videos and 1 long-form narrative video."
+      },
+      {
+        number: "03",
+        title: "Algorithm Mastery & SEO Optimization",
+        description: "Unlocking search and recommendation algorithms across Facebook Reels and YouTube.",
+        topics: ["Title & Description SEO", "High-CTR Thumbnails", "Tagging & Playlists", "Facebook Watch Engagement"],
+        practicalTask: "Execute an SEO optimization package on a live video with thumbnail A/B testing."
+      },
+      {
+        number: "04",
+        title: "Monetization Qualification & Revenue Scaling",
+        description: "Unlocking monetization, compliance with partner policies, and setting up international earnings payouts.",
+        topics: ["YouTube Partner Program", "Facebook In-Stream Ads", "Copyright & Fair Use", "AdSense, Payoneer & Taxes"],
+        practicalTask: "Complete monetization readiness audit and establish payout infrastructure."
+      }
+    ],
+    whoShouldEnroll: [
+      { title: "Aspiring YouTubers & Vloggers", description: "Turn personal passion into a sustainable, profitable online career." },
+      { title: "Freelancers & Video Editors", description: "Manage channels and produce high-converting videos for international clients on Upwork." },
+      { title: "Business Owners & Influencers", description: "Build an organic brand following and generate multi-stream digital income." }
+    ],
+    prerequisites: "Basic familiarity with using a computer or smartphone. No prior video editing experience required.",
+    careerPaths: [
+      { title: "Monetized Content Creator", description: "Earn revenue through AdSense, sponsorships, and digital merchandise." },
+      { title: "YouTube Channel Growth Manager", description: "Manage channel strategy and SEO for creators and companies globally." },
+      { title: "Freelance Video Producer", description: "Offer high-demand video editing and channel management services." }
+    ],
+    certificate: "Certificate in Facebook & YouTube Monetization from Pak Royal College.",
+    fee: {
+      amount: "PKR 25,000",
+      installments: "Payable in monthly installments of PKR 8,500",
+      note: "Includes practical studio lab access, editing software guides, and personal channel reviews."
+    },
+    faqs: [
+      { question: "Can I earn from YouTube and Facebook while living in Pakistan?", answer: "Yes! We teach compliant monetization setups using legitimate payment systems (AdSense, Payoneer, wire transfer) used by top Pakistani creators." },
+      { question: "Is editing software provided?", answer: "Yes, you will receive full hands-on lab training using industry-standard tools including CapCut, Adobe Premiere Pro, and Canva Pro." }
+    ]
   }
 ];

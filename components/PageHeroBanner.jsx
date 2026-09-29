@@ -27,8 +27,8 @@ export default function PageHeroBanner({
           className="object-cover object-center scale-105"
         />
         {/* Clean Dark Cinematic Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/80 to-black/45" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-black/40" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -48,13 +48,13 @@ export default function PageHeroBanner({
           </h1>
 
           {urdu && (
-            <p className="urdu-font text-blue-200 text-xl sm:text-2xl drop-shadow">
+            <p className="urdu-font text-blue-200 text-2xl sm:text-3xl md:text-4xl leading-relaxed drop-shadow-md font-medium">
               {urdu}
             </p>
           )}
 
           {description && (
-            <p className="text-sm sm:text-base text-slate-200 leading-relaxed font-light max-w-3xl drop-shadow">
+            <p className="text-base sm:text-lg text-slate-100 leading-relaxed font-normal max-w-3xl drop-shadow-md">
               {description}
             </p>
           )}

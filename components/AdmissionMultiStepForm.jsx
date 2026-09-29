@@ -51,7 +51,7 @@ export default function AdmissionMultiStepForm() {
 
     // Step 3: Program
     programType: "bs",
-    selectedProgram: "bs-computer-science",
+    selectedProgram: "bs-operation-theater-technology-ott",
     studyShift: "Morning",
     scholarshipCategory: "None",
 

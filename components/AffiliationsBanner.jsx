@@ -31,18 +31,20 @@ const recognitions = [
   {
     name: "Higher Education Commission (HEC)",
     subtitle: "National Quality Curriculum Alignment",
-    badge: "HEC Aligned",
+    badge: "Coming Soon",
+    isComingSoon: true,
     icon: ShieldCheck,
     color: "from-purple-600 to-purple-800",
-    bgLight: "bg-purple-50 text-purple-800 border-purple-200"
+    bgLight: "bg-amber-50 text-amber-700 border-amber-300 font-bold"
   },
   {
     name: "Punjab Board of Technical Education (PBTE)",
     subtitle: "1-Year Diplomas & IT Certifications",
-    badge: "PBTE Certified",
+    badge: "Coming Soon",
+    isComingSoon: true,
     icon: CheckCircle2,
     color: "from-cyan-600 to-blue-800",
-    bgLight: "bg-cyan-50 text-cyan-800 border-cyan-200"
+    bgLight: "bg-amber-50 text-amber-700 border-amber-300 font-bold"
   }
 ];
 
@@ -99,7 +101,10 @@ export default function AffiliationsBanner() {
                     <div className="w-10 h-10 rounded-xl bg-prc-light text-prc-primary flex items-center justify-center group-hover:scale-110 transition-transform">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border ${item.bgLight}`}>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full border inline-flex items-center gap-1.5 ${item.bgLight}`}>
+                      {item.isComingSoon && (
+                        <span className="w-1.5 h-1.5 rounded-full bg-amber-500 animate-pulse" />
+                      )}
                       {item.badge}
                     </span>
                   </div>

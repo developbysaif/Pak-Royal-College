@@ -86,7 +86,7 @@ export default function HomePage() {
             <div className="space-y-4">
               <div className="relative h-56 sm:h-64 rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/hero_campus.jpg"
+                  src="/images/pak.jpeg"
                   alt="Pak Royal College Campus Architecture"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
@@ -112,8 +112,8 @@ export default function HomePage() {
               </div>
               <div className="relative h-56 sm:h-64 rounded-3xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/hero_library.jpg"
-                  alt="Students in modern library and study lounge"
+                  src="/images/Front-PRC.jpeg"
+                  alt="Pak Royal College Front View"
                   fill
                   className="object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -174,7 +174,96 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* SECTION 4 — WHY CHOOSE US */}
+      {/* SECTION 4 — PROGRAM EXPLORER */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionHeading
+          badge="Academic Offerings"
+          title="Explore Our Programs"
+          subtitle="Discover BS degrees, professional diplomas, and career-advancing certifications."
+        />
+
+        {/* Search & Tabs */}
+        <div className="space-y-6 mb-10">
+          <div className="relative max-w-xl mx-auto">
+            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
+            <input
+              type="text"
+              placeholder="Search programs by degree or keywords (e.g. Computer Science, AI, BBA)..."
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              className="w-full pl-12 pr-4 py-3.5 bg-white rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-prc-primary text-sm shadow-sm"
+            />
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {[
+              { id: "all", label: "All Programs" },
+              { id: "intermediate", label: "Intermediate (FSc / ICS / FA)" },
+              { id: "bs", label: "BS Programs (4 Yrs)" },
+              { id: "it-skills", label: "IT Skills & Bootcamps" },
+              { id: "diploma", label: "Diploma (2 Yr)" }
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
+                  activeTab === tab.id
+                    ? "bg-prc-primary text-white shadow-md scale-105"
+                    : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        {/* Program Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredPrograms.map((prog) => (
+            <ProgramCard key={prog.id} program={prog} />
+          ))}
+        </div>
+      </section>
+
+      {/* SECTION 5 — FEATURED BS PROGRAMS */}
+      <section className="bg-prc-light/60 py-20 border-y border-blue-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+            <div>
+              <span className="px-3.5 py-1 rounded-full bg-white text-prc-primary text-xs font-bold uppercase tracking-wider border border-blue-200">
+                Undergraduate Degrees
+              </span>
+              <h2 className="text-3xl sm:text-4xl font-black text-prc-navy mt-2">
+                Build Your Future With Our BS Programs
+              </h2>
+              <p className="text-sm text-slate-600 max-w-2xl mt-1">
+                Four-year HEC-compliant degree tracks crafted to produce industry-ready leaders in software engineering, artificial intelligence, business and science.
+              </p>
+            </div>
+            <Link
+              href="/programs/bs"
+              className="inline-flex items-center gap-1.5 text-sm font-bold text-prc-primary hover:text-prc-navy transition-colors shrink-0"
+            >
+              <span>View All BS Programs</span>
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredBsPrograms.map((prog) => (
+              <ProgramCard key={prog.id} program={prog} featured />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* SECTION 6 — ACADEMIC STATS */}
+      <section>
+        <StatsCounter />
+      </section>
+
+      {/* SECTION 7 — WHY CHOOSE US */}
       <section className="bg-white py-20 border-y border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SectionHeading
@@ -243,95 +332,6 @@ export default function HomePage() {
             })}
           </div>
         </div>
-      </section>
-
-      {/* SECTION 5 — PROGRAM EXPLORER */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <SectionHeading
-          badge="Academic Offerings"
-          title="Explore Our Programs"
-          subtitle="Discover BS degrees, professional diplomas, and career-advancing certifications."
-        />
-
-        {/* Search & Tabs */}
-        <div className="space-y-6 mb-10">
-          <div className="relative max-w-xl mx-auto">
-            <Search className="w-5 h-5 absolute left-4 top-1/2 -translate-y-1/2 text-slate-400" />
-            <input
-              type="text"
-              placeholder="Search programs by degree or keywords (e.g. Computer Science, AI, BBA)..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3.5 bg-white rounded-2xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-prc-primary text-sm shadow-sm"
-            />
-          </div>
-
-          <div className="flex flex-wrap items-center justify-center gap-2">
-            {[
-              { id: "all", label: "All Programs" },
-              { id: "intermediate", label: "Intermediate (FSc / ICS / MLT)" },
-              { id: "bs", label: "BS Programs (4 Yrs)" },
-              { id: "it-skills", label: "IT Skills & Bootcamps" },
-              { id: "diploma", label: "Diplomas (1 Yr)" }
-            ].map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all ${
-                  activeTab === tab.id
-                    ? "bg-prc-primary text-white shadow-md scale-105"
-                    : "bg-white text-slate-700 hover:bg-slate-100 border border-slate-200"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Program Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredPrograms.map((prog) => (
-            <ProgramCard key={prog.id} program={prog} />
-          ))}
-        </div>
-      </section>
-
-      {/* SECTION 6 — FEATURED BS PROGRAMS */}
-      <section className="bg-prc-light/60 py-20 border-y border-blue-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-            <div>
-              <span className="px-3.5 py-1 rounded-full bg-white text-prc-primary text-xs font-bold uppercase tracking-wider border border-blue-200">
-                Undergraduate Degrees
-              </span>
-              <h2 className="text-3xl sm:text-4xl font-black text-prc-navy mt-2">
-                Build Your Future With Our BS Programs
-              </h2>
-              <p className="text-sm text-slate-600 max-w-2xl mt-1">
-                Four-year HEC-compliant degree tracks crafted to produce industry-ready leaders in software engineering, artificial intelligence, business and science.
-              </p>
-            </div>
-            <Link
-              href="/programs/bs"
-              className="inline-flex items-center gap-1.5 text-sm font-bold text-prc-primary hover:text-prc-navy transition-colors shrink-0"
-            >
-              <span>View All BS Programs</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredBsPrograms.map((prog) => (
-              <ProgramCard key={prog.id} program={prog} featured />
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* SECTION 7 — ACADEMIC STATS */}
-      <section>
-        <StatsCounter />
       </section>
 
       {/* SECTION 8 — CAMPUS EXPERIENCE */}
@@ -544,7 +544,7 @@ export default function HomePage() {
             Your Future Starts Here.
           </h2>
 
-          <p className="urdu-font text-xl text-blue-200">
+          <p className="urdu-font text-2xl sm:text-3xl md:text-4xl text-blue-200 leading-relaxed">
             جہاں مستقبل کی بنیاد رکھی جاتی ہے
           </p>
 
@@ -607,7 +607,7 @@ export default function HomePage() {
                 <Mail className="w-5 h-5 text-prc-primary shrink-0 mt-0.5" />
                 <div>
                   <div className="font-bold text-slate-900">Official Inquiries</div>
-                  <div className="text-slate-600">{collegeInfo.email}</div>
+                  <div className="text-slate-600 break-all">{collegeInfo.email} / {collegeInfo.altEmail}</div>
                 </div>
               </div>
 

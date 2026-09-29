@@ -29,15 +29,45 @@ import ProgramCard from "@/components/ProgramCard";
 import { programs } from "@/data/programs";
 import { collegeInfo } from "@/data/collegeInfo";
 
+function findProgram(slug) {
+  let program = programs.find((p) => p.slug === slug);
+  if (!program) {
+    if (slug === "ics-computer-science") {
+      program = programs.find((p) => p.slug === "ics-physics-combination");
+    } else if (slug === "fsc-medical-laboratory-technology") {
+      program = programs.find((p) => p.slug === "medical-laboratory-science-technology-mlt");
+    } else if (slug === "bs-computer-science" || slug === "bs-software-engineering") {
+      program = programs.find((p) => p.slug === "adp-computer-science") || programs.find((p) => p.slug === "bs-information-technology");
+    } else if (slug === "bs-artificial-intelligence") {
+      program = programs.find((p) => p.slug === "bs-information-technology");
+    } else if (slug === "bs-business-administration" || slug === "bs-mathematics" || slug === "bs-english") {
+      program = programs.find((p) => p.slug === "bs-psychology");
+    }
+  }
+  return program;
+}
+
 export async function generateStaticParams() {
-  return programs.map((p) => ({
+  const params = programs.map((p) => ({
     slug: p.slug
   }));
+  const legacySlugs = [
+    "ics-computer-science",
+    "fsc-medical-laboratory-technology",
+    "bs-computer-science",
+    "bs-software-engineering",
+    "bs-artificial-intelligence",
+    "bs-business-administration",
+    "bs-mathematics",
+    "bs-english"
+  ];
+  legacySlugs.forEach((s) => params.push({ slug: s }));
+  return params;
 }
 
 export async function generateMetadata({ params }) {
   const { slug } = await params;
-  const program = programs.find((p) => p.slug === slug);
+  const program = findProgram(slug);
 
   if (!program) {
     return {
@@ -58,7 +88,7 @@ export async function generateMetadata({ params }) {
 
 export default async function ProgramDetailPage({ params }) {
   const { slug } = await params;
-  const program = programs.find((p) => p.slug === slug);
+  const program = findProgram(slug);
 
   if (!program) {
     notFound();
@@ -85,13 +115,23 @@ export default async function ProgramDetailPage({ params }) {
         ]}
       >
         <div className="pt-3 flex flex-wrap items-center gap-4">
-          <Link
-            href="/apply"
-            className="bg-white text-prc-navy hover:bg-prc-light font-black px-7 py-3.5 rounded-full text-sm shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
-          >
-            <Sparkles className="w-4 h-4 text-prc-primary" />
-            <span>Apply Now for Fall 2026</span>
-          </Link>
+          {program.isComingSoon ? (
+            <Link
+              href="/contact"
+              className="bg-amber-400 hover:bg-amber-300 text-amber-950 font-black px-7 py-3.5 rounded-full text-sm shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+            >
+              <Clock className="w-4 h-4 text-amber-950" />
+              <span>Admissions Coming Soon — Inquire Now</span>
+            </Link>
+          ) : (
+            <Link
+              href="/apply"
+              className="bg-white text-prc-navy hover:bg-prc-light font-black px-7 py-3.5 rounded-full text-sm shadow-xl transition-all hover:scale-105 active:scale-95 flex items-center gap-2"
+            >
+              <Sparkles className="w-4 h-4 text-prc-primary" />
+              <span>Apply Now for Fall 2026</span>
+            </Link>
+          )}
 
           <Link
             href="/admissions/requirements"
@@ -124,14 +164,47 @@ export default async function ProgramDetailPage({ params }) {
           </div>
           <div className="p-3 border-r border-slate-100 last:border-0">
             <div className="text-xs font-semibold text-slate-400 uppercase">Accreditation</div>
-            <div className="text-xs sm:text-sm font-bold text-emerald-600 mt-1">HEC Aligned</div>
+            <div className="text-xs sm:text-sm font-bold text-emerald-600 mt-1">
+              {program.isComingSoon ? "Pending Inspection" : "HEC / Board Aligned"}
+            </div>
           </div>
           <div className="p-3">
             <div className="text-xs font-semibold text-slate-400 uppercase">Admissions</div>
-            <div className="text-xs sm:text-sm font-bold text-blue-600 mt-1">Open for 2026</div>
+            <div className={`text-xs sm:text-sm font-bold mt-1 ${program.isComingSoon ? "text-amber-600" : "text-blue-600"}`}>
+              {program.isComingSoon ? "Coming Soon" : "Open for 2026"}
+            </div>
           </div>
         </div>
       </section>
+
+      {/* COMING SOON ANNOUNCEMENT BANNER */}
+      {program.isComingSoon && (
+        <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-gradient-to-r from-amber-500 via-amber-600 to-amber-500 text-white rounded-3xl p-6 sm:p-8 shadow-xl flex flex-col md:flex-row items-center justify-between gap-6 border-2 border-amber-300">
+            <div className="space-y-2 text-center md:text-left">
+              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md text-white font-extrabold text-xs uppercase px-3 py-1 rounded-full border border-white/30">
+                <span className="relative flex h-2 w-2">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+                  <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+                </span>
+                Admissions Coming Soon
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black">
+                {program.title} — Admissions Launching Soon
+              </h2>
+              <p className="text-sm sm:text-base text-amber-50 max-w-2xl leading-relaxed">
+                Academic and regulatory approval for the Bachelor of Science in Nursing (BSN) degree is currently in progress. Regular student admissions will commence immediately upon notification. Pre-register your interest today to receive priority enrollment alerts.
+              </p>
+            </div>
+            <Link
+              href="/contact"
+              className="bg-white text-amber-950 hover:bg-amber-50 font-black px-8 py-3.5 rounded-full text-sm shadow-xl transition-all hover:scale-105 whitespace-nowrap"
+            >
+              Inquire / Pre-Register Now
+            </Link>
+          </div>
+        </section>
+      )}
 
       {/* Main Content Layout with Sticky Sidebar */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -405,6 +478,7 @@ export default async function ProgramDetailPage({ params }) {
               type="program"
               fee={program.fees?.totalSemesterEstimate}
               duration={program.duration}
+              isComingSoon={program.isComingSoon}
             />
           </div>
         </div>

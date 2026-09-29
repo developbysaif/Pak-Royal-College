@@ -6,7 +6,7 @@ export const newsArticles = [
     category: "Admissions",
     date: "September 20, 2026",
     author: "Admissions Directorate",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/news_admissions_pak.jpg",
     excerpt: "Pak Royal College announces the commencement of online admissions for Fall 2026 across BS Computer Science, BS AI, BS Software Engineering, BBA, and professional diplomas with merit scholarships up to 100%.",
     readTime: "4 min read",
     content: [
@@ -23,7 +23,7 @@ export const newsArticles = [
     category: "Campus & Tech",
     date: "September 12, 2026",
     author: "Department of Computer Science & AI",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1200&auto=format&fit=crop",
+    image: "/images/news_ai_lab_pak.jpg",
     excerpt: "The new high-performance AI Computing Lab equipped with dedicated NVIDIA GPU servers was inaugurated today to accelerate deep learning, neural networks, and computer vision student research.",
     readTime: "5 min read",
     content: [

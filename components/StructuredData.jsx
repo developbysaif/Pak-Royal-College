@@ -40,7 +40,8 @@ export default function StructuredData({ type = "organization", data = {} }) {
         collegeInfo.socials.facebook,
         collegeInfo.socials.linkedin,
         collegeInfo.socials.instagram,
-        collegeInfo.socials.youtube
+        collegeInfo.socials.youtube,
+        collegeInfo.socials.tiktok
       ]
     };
   } else if (type === "course" && data) {

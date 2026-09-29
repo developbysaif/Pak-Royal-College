@@ -92,6 +92,9 @@ export default function ContactPage() {
                       <a href={`mailto:${collegeInfo.email}`} className="hover:text-prc-primary block">
                         General: {collegeInfo.email}
                       </a>
+                      <a href={`mailto:${collegeInfo.altEmail}`} className="hover:text-prc-primary block">
+                        Gmail: {collegeInfo.altEmail}
+                      </a>
                       <a href={`mailto:${collegeInfo.admissionsEmail}`} className="hover:text-prc-primary block font-medium">
                         Admissions: {collegeInfo.admissionsEmail}
                       </a>

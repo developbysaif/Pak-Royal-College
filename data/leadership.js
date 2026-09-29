@@ -1,15 +1,24 @@
 export const leadership = {
   message: {
-    title: "Principal & Executive Director's Message",
-    author: "Prof. Dr. Muhammad Aslam Chaudhary",
-    designation: "Principal & Dean of Academics",
-    qualification: "PhD in Computer Engineering, Senior Member IEEE",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
+    title: "Founder’s Message",
+    urduTitle: "بانی کا پیغام",
+    salutation: "Dear Students, Parents, and Respected Community Members,",
+    author: "Haji Muhammad Ashiq",
+    designation: "Founder, Pak Royal College (Pvt.) Ltd.",
+    organization: "Pak Royal College (Pvt.) Ltd.",
+    location: "Sharaqpur Sharif",
+    motto: "Hamara Khawab – Parha Likha Sharaqpur.",
+    mottoUrdu: "ہمارا خواب — پڑھا لکھا شرقپور",
+    tagline: "Pak Royal College – A Place Where Futures Begin.",
+    image: "/images/founder_haji_muhammad_ashiq.jpg",
     paragraphs: [
-      "Welcome to Pak Royal College — an institution established with a distinct purpose: to bridge rigorous academic knowledge with futuristic, practical skills in technology, health sciences, business, and humanities.",
-      "Our motto, 'A Place Where Futures Begin' (جہاں مستقبل کی بنیاد رکھی جاتی ہے), is not merely a slogan; it is the guiding beacon behind every lecture, laboratory session, research initiative, and student mentorship program we cultivate.",
-      "In an era redefined by rapid advancements in Artificial Intelligence, computing systems, and globalized markets, education must be dynamic and forward-looking. At Pak Royal College, we empower our students with critical thinking, ethical integrity, and industry-demanded technical mastery to lead our nation into a prosperous digital future.",
-      "I warmly invite ambitious learners to join our vibrant campus community and embark on a transformative educational voyage."
+      "It gives me immense pleasure to welcome you to Pak Royal College, an institution established with a vision to provide quality, accessible, and career-oriented education to the youth of Sharaqpur Sharif and surrounding communities.",
+      "Our mission goes beyond academic success. We aim to create an environment where students gain knowledge, develop practical skills, build confidence, and prepare themselves for the challenges of higher education and professional life.",
+      "At Pak Royal College, we are committed to providing opportunities in Intermediate Education, Allied Health Sciences, Undergraduate Education, Nursing, Information Technology, and Professional & Digital Skills. Through qualified faculty, modern learning facilities, practical training, and a student-focused approach, we strive to help every learner discover and achieve their potential.",
+      "I firmly believe that education is the foundation of a stronger society. Our dream is simple yet meaningful:",
+      "“Hamara Khawab – Parha Likha Sharaqpur.”",
+      "I invite students and parents to become part of the Pak Royal College community and join us in building a future filled with knowledge, skills, opportunities, and success.",
+      "Pak Royal College – A Place Where Futures Begin."
     ]
   },
   governance: [
@@ -19,41 +28,41 @@ export const leadership = {
     },
     {
       title: "Academic Council",
-      description: "Headed by the Dean of Academics and department heads, ensuring that all curricula, examinations, and teaching standards adhere strictly to Higher Education Commission (HEC) and BISE regulatory benchmarks."
+      description: "Ensures that all curricula, clinical laboratories, examinations, and teaching standards adhere strictly to university, Higher Education Commission (HEC), and board benchmarks."
     },
     {
-      title: "Industry Advisory Board",
-      description: "Comprising leading tech CEOs, enterprise software architects, and financial directors who continuously review and modernize our academic syllabi."
+      title: "Industry & Healthcare Advisory Board",
+      description: "Comprising leading hospital medical directors, IT enterprise leaders, and corporate mentors who continuously align our training with employment demands."
     }
   ],
   boardMembers: [
     {
-      name: "Prof. Dr. Muhammad Aslam Chaudhary",
-      role: "Principal & Executive Dean",
-      qualification: "PhD Computer Engineering (UK)",
-      experience: "25+ Years in Higher Education Leadership",
-      image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop"
+      name: "Haji Muhammad Ashiq",
+      role: "Founder & Chairman Board of Governors",
+      qualification: "Patron-in-Chief & Visionary Leader",
+      experience: "Vision: Hamara Khawab – Parha Likha Sharaqpur",
+      image: "/images/founder_haji_muhammad_ashiq.jpg"
     },
     {
       name: "Engr. Khalid Jameel",
       role: "Director Administration & Planning",
-      qualification: "MS Systems Engineering (NUST)",
+      qualification: "MS Systems Engineering",
       experience: "20+ Years Institutional Management",
-      image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800&auto=format&fit=crop"
+      image: "/images/faculty_farhan_khan.jpg"
     },
     {
       name: "Dr. Shahida Parveen",
       role: "Director Quality Enhancement Cell (QEC)",
-      qualification: "PhD Education Policy & Curriculum (PU)",
+      qualification: "PhD Education Policy & Curriculum",
       experience: "18+ Years Academic Quality Assurance",
-      image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=800&auto=format&fit=crop"
+      image: "/images/faculty_sarah_ahmed.jpg"
     },
     {
       name: "Malik Usman Tariq",
-      role: "Director Industry Linkages & Placement",
-      qualification: "MBA Executive (LUMS)",
-      experience: "15+ Years Corporate Relations & Tech Recruitment",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop"
+      role: "Director Placement & Corporate Linkages",
+      qualification: "MBA Executive",
+      experience: "15+ Years Corporate Relations",
+      image: "/images/faculty_yasmin_malik.jpg"
     }
   ]
 };

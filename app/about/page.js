@@ -43,8 +43,8 @@ export default function AboutPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 -mt-12 relative z-20">
         <div className="relative h-72 sm:h-96 md:h-[480px] rounded-3xl overflow-hidden shadow-2xl border-4 border-white">
           <Image
-            src="/images/hero_campus.jpg"
-            alt="Pak Royal College Main Campus"
+            src="/images/Pak Royal College view.jpeg"
+            alt="Pak Royal College Main Campus View"
             fill
             className="object-cover"
             priority
@@ -88,12 +88,12 @@ export default function AboutPage() {
               <p className="text-xs text-slate-500">Rigorous compliance with national undergraduate curricula.</p>
             </div>
             <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-md space-y-2">
-              <div className="text-3xl font-black text-prc-primary">8+</div>
+              <div className="text-3xl font-black text-prc-primary">11</div>
               <div className="font-bold text-sm text-prc-navy">Hi-Tech Labs</div>
               <p className="text-xs text-slate-500">GPU computing, networking, and digital studio facilities.</p>
             </div>
             <div className="p-6 rounded-3xl bg-white border border-slate-200 shadow-md space-y-2">
-              <div className="text-3xl font-black text-prc-primary">45+</div>
+              <div className="text-3xl font-black text-prc-primary">19+</div>
               <div className="font-bold text-sm text-prc-navy">Qualified Faculty</div>
               <p className="text-xs text-slate-500">PhD and MPhil qualified educators and industry advisors.</p>
             </div>
@@ -198,38 +198,91 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Leadership Preview */}
-      <section className="bg-prc-light/60 py-16 border-y border-blue-100">
+      {/* SECTION: Founder's Message */}
+      <section className="bg-gradient-to-br from-blue-50/80 via-white to-slate-50 py-16 border-y border-blue-100 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            <div className="lg:col-span-4 relative h-80 rounded-3xl overflow-hidden shadow-xl border-4 border-white">
-              <Image
-                src={leadership.message.image}
-                alt={leadership.message.author}
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="lg:col-span-8 space-y-4">
-              <span className="text-xs font-bold text-prc-primary uppercase tracking-wider">
-                Leadership Message
-              </span>
-              <h3 className="text-2xl sm:text-3xl font-black text-prc-navy">
-                {leadership.message.title}
-              </h3>
-              <p className="text-sm text-slate-700 leading-relaxed italic">
-                "{leadership.message.paragraphs[0]}"
-              </p>
-              <div className="pt-2">
-                <div className="font-bold text-prc-navy text-base">{leadership.message.author}</div>
-                <div className="text-xs text-prc-primary font-semibold">{leadership.message.designation}</div>
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+            {/* Left: Founder Portrait Card */}
+            <div className="lg:col-span-5">
+              <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-white">
+                <div className="relative h-96 sm:h-[430px] w-full">
+                  <Image
+                    src={leadership.message.image}
+                    alt={leadership.message.author}
+                    fill
+                    className="object-cover object-top hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-prc-navy/90 via-prc-navy/30 to-transparent" />
+
+                  {/* Overlay Name Tag */}
+                  <div className="absolute bottom-5 left-5 right-5 text-white">
+                    <span className="text-[11px] font-extrabold uppercase tracking-widest text-amber-300 block mb-1">
+                      Founder & Patron-in-Chief
+                    </span>
+                    <h4 className="text-xl sm:text-2xl font-black">{leadership.message.author}</h4>
+                    <p className="text-xs text-blue-200 mt-0.5">
+                      {leadership.message.organization}, {leadership.message.location}
+                    </p>
+                  </div>
+                </div>
               </div>
-              <div className="pt-2">
+            </div>
+
+            {/* Right: Message Content */}
+            <div className="lg:col-span-7 space-y-4">
+              <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-prc-light text-prc-primary text-xs font-bold uppercase tracking-wider border border-blue-200">
+                <Sparkles className="w-3.5 h-3.5" />
+                <span>Founder’s Message</span>
+              </div>
+
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-prc-navy leading-tight">
+                {leadership.message.title}
+              </h2>
+
+              <p className="text-sm font-bold text-prc-primary">
+                {leadership.message.salutation}
+              </p>
+
+              <div className="space-y-3 text-sm text-slate-600 leading-relaxed">
+                <p>
+                  It gives me immense pleasure to welcome you to <strong className="text-prc-navy">Pak Royal College</strong>, an institution established with a vision to provide quality, accessible, and career-oriented education to the youth of Sharaqpur Sharif and surrounding communities.
+                </p>
+                <p>
+                  Our mission goes beyond academic success. We aim to create an environment where students gain knowledge, develop practical skills, build confidence, and prepare themselves for the challenges of higher education and professional life.
+                </p>
+                <p>
+                  At Pak Royal College, we are committed to providing opportunities in <strong className="text-prc-navy">Intermediate Education, Allied Health Sciences, Undergraduate Education, Nursing, Information Technology, and Professional & Digital Skills</strong>.
+                </p>
+              </div>
+
+              {/* Dream Motto Callout */}
+              <div className="p-4 sm:p-5 rounded-2xl bg-royal-gradient text-white shadow-md space-y-1">
+                <span className="text-[11px] uppercase tracking-wider text-amber-300 font-extrabold block">
+                  Our Guiding Vision
+                </span>
+                <div className="text-lg sm:text-xl font-black">
+                  “Hamara Khawab – Parha Likha Sharaqpur.”
+                </div>
+                <div className="urdu-font text-base sm:text-lg text-blue-100">
+                  ہمارا خواب — پڑھا لکھا شرقپور
+                </div>
+              </div>
+
+              {/* Closing */}
+              <div className="pt-2 flex flex-wrap items-center justify-between gap-4 border-t border-slate-200">
+                <div>
+                  <div className="font-extrabold text-prc-navy text-base">{leadership.message.author}</div>
+                  <div className="text-xs text-slate-500 font-semibold">
+                    {leadership.message.designation} — {leadership.message.location}
+                  </div>
+                </div>
+
                 <Link
                   href="/about/leadership"
-                  className="inline-flex items-center gap-1.5 text-xs font-bold text-prc-primary hover:underline"
+                  className="inline-flex items-center gap-2 bg-prc-primary hover:bg-prc-navy text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-all hover:scale-105"
                 >
-                  <span>Read Full Leadership & Governance Details →</span>
+                  <span>Read Full Message</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
                 </Link>
               </div>
             </div>
