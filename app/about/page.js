@@ -217,7 +217,7 @@ export default function AboutPage() {
                   {/* Overlay Name Tag */}
                   <div className="absolute bottom-5 left-5 right-5 text-white">
                     <span className="text-[11px] font-extrabold uppercase tracking-widest text-amber-300 block mb-1">
-                      Founder & Patron-in-Chief
+                      Founder
                     </span>
                     <h4 className="text-xl sm:text-2xl font-black">{leadership.message.author}</h4>
                     <p className="text-xs text-blue-200 mt-0.5">
@@ -278,7 +278,7 @@ export default function AboutPage() {
                 </div>
 
                 <Link
-                  href="/about/leadership"
+                  href="/about/founder"
                   className="inline-flex items-center gap-2 bg-prc-primary hover:bg-prc-navy text-white text-xs font-bold px-5 py-2.5 rounded-full shadow-md transition-all hover:scale-105"
                 >
                   <span>Read Full Message</span>

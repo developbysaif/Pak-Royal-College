@@ -164,10 +164,10 @@ export default function HomePage() {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                href="/about/leadership"
+                href="/about/founder"
                 className="inline-flex items-center gap-1 text-sm font-bold text-prc-primary hover:underline px-3 py-2"
               >
-                <span>Meet Leadership & Governance →</span>
+                <span>Founder’s Message →</span>
               </Link>
             </div>
           </div>

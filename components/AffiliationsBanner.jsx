@@ -1,6 +1,6 @@
 "use client";
 
-import { Award, GraduationCap, Building2, ShieldCheck, CheckCircle2, Star, Sparkles } from "lucide-react";
+import { Award, GraduationCap, ShieldCheck, CheckCircle2, Star, Sparkles } from "lucide-react";
 import { collegeInfo } from "@/data/collegeInfo";
 
 const recognitions = [
@@ -19,14 +19,6 @@ const recognitions = [
     icon: GraduationCap,
     color: "from-blue-600 to-indigo-800",
     bgLight: "bg-blue-50 text-blue-800 border-blue-200"
-  },
-  {
-    name: "University of Okara",
-    subtitle: "Affiliated Academic Degree Framework",
-    badge: "Recognized Higher Ed",
-    icon: Building2,
-    color: "from-emerald-600 to-teal-800",
-    bgLight: "bg-emerald-50 text-emerald-800 border-emerald-200"
   },
   {
     name: "Higher Education Commission (HEC)",
@@ -88,7 +80,7 @@ export default function AffiliationsBanner() {
         </div>
 
         {/* Affiliation Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {recognitions.map((item, idx) => {
             const Icon = item.icon;
             return (

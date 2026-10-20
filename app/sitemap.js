@@ -10,7 +10,7 @@ export default function sitemap() {
     "",
     "/about",
     "/about/mission-vision",
-    "/about/leadership",
+    "/about/founder",
     "/about/faculty",
     "/programs",
     "/programs/bs",

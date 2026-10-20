@@ -249,8 +249,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/about/leadership" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
-                  Leadership & Governance
+                <Link href="/about/founder" className="hover:text-white transition-colors hover:translate-x-1 inline-block">
+                  Founder’s Message
                 </Link>
               </li>
               <li>

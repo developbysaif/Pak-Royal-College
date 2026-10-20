@@ -29,7 +29,6 @@ export const collegeInfo = {
   affiliations: [
     { name: "Federal Board (FBISE)", desc: "Affiliated for Intermediate & Medical Tech", icon: "Award" },
     { name: "Govt College University Faisalabad (GCUF)", desc: "Degree Affiliation & Academic Collaboration", icon: "GraduationCap" },
-    { name: "University of Okara", desc: "Recognized Higher Education Partner", icon: "Building2" },
     { name: "Higher Education Commission (HEC)", desc: "HEC Aligned Degree Framework (Coming Soon)", icon: "ShieldCheck", status: "Coming Soon" },
     { name: "Punjab Board of Technical Education (PBTE)", desc: "Technical Diplomas & IT Certifications (Coming Soon)", icon: "CheckCircle2", status: "Coming Soon" }
   ],
