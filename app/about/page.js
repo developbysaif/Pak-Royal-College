@@ -290,50 +290,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* SECTION: Executive Leadership / Board of Governors */}
-      <section className="bg-white py-16 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <SectionHeading
-            badge="Executive Leadership"
-            title="Board of Governors & Leadership"
-            subtitle="Distinguished leadership guiding the strategic growth, academic distinction, and vision of Pak Royal College."
-          />
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {leadership.boardMembers.map((member, idx) => (
-              <div
-                key={idx}
-                className="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200 shadow-sm hover:shadow-xl transition-all flex flex-col justify-between hover:-translate-y-1 group"
-              >
-                <div>
-                  <div className="relative h-72 sm:h-80 w-full bg-slate-200 overflow-hidden">
-                    <Image
-                      src={member.image}
-                      alt={member.name}
-                      fill
-                      className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  <div className="p-6 space-y-1.5">
-                    <h3 className="font-extrabold text-lg text-prc-navy group-hover:text-prc-primary transition-colors">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm font-bold text-prc-accent">{member.role}</p>
-                    {member.qualification && (
-                      <p className="text-xs text-slate-600 font-medium">{member.qualification}</p>
-                    )}
-                    {member.experience && (
-                      <p className="text-[11px] text-slate-500 pt-1">{member.experience}</p>
-                    )}
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Faculty Preview */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between mb-8">

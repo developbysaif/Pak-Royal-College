@@ -1,5 +1,27 @@
 export const faculty = [
   {
+    id: "fac-chairman",
+    slug: "ms-saher-umer",
+    name: "Ms. Saher Umer",
+    designation: "Chairman",
+    department: "Executive Leadership",
+    role: "Chairman",
+    image: "/images/miss_seher.jpg",
+    email: "chairman@pakroyalcollege.edu.pk",
+    specialization: ["Strategic Planning", "Institutional Governance", "Academic Leadership"]
+  },
+  {
+    id: "fac-ceo",
+    slug: "muhammad-umer-watto",
+    name: "Muhammad Umer Watto",
+    designation: "CEO",
+    department: "Executive Leadership",
+    role: "CEO",
+    image: "/images/umer_watto.jpg",
+    email: "ceo@pakroyalcollege.edu.pk",
+    specialization: ["Executive Leadership", "Industry Partnerships", "Operations Management"]
+  },
+  {
     id: "fac-1",
     slug: "dr-tariq-mahmood",
     name: "Dr. Tariq Mahmood",
@@ -107,6 +129,7 @@ export const faculty = [
 
 export const facultyDepartments = [
   "All Departments",
+  "Executive Leadership",
   "Computer Science & AI",
   "Information Technology",
   "Allied Health Sciences",

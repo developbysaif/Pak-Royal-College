@@ -35,26 +35,32 @@ export default function FacultyCard({ member }) {
           <p className="text-xs font-bold text-prc-accent">
             {member.designation}
           </p>
-          <div className="flex items-start gap-1.5 text-xs text-slate-600 pt-1">
-            <GraduationCap className="w-4 h-4 text-prc-primary shrink-0 mt-0.5" />
-            <span className="line-clamp-2">{member.qualification}</span>
-          </div>
-          <p className="text-xs text-slate-500 line-clamp-2 pt-1 leading-relaxed">
-            {member.bio}
-          </p>
+          {member.qualification && (
+            <div className="flex items-start gap-1.5 text-xs text-slate-600 pt-1">
+              <GraduationCap className="w-4 h-4 text-prc-primary shrink-0 mt-0.5" />
+              <span className="line-clamp-2">{member.qualification}</span>
+            </div>
+          )}
+          {member.bio && (
+            <p className="text-xs text-slate-500 line-clamp-2 pt-1 leading-relaxed">
+              {member.bio}
+            </p>
+          )}
         </div>
       </div>
 
       {/* Footer / Email */}
       <div className="p-6 pt-0 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
         <a
-          href={`mailto:${member.email}`}
+          href={`mailto:${member.email || 'info@pakroyalcollege.edu.pk'}`}
           className="flex items-center gap-1.5 text-prc-primary hover:text-prc-navy font-semibold transition-colors"
         >
           <Mail className="w-3.5 h-3.5" />
-          <span>Contact Faculty</span>
+          <span>{member.role === 'Chairman' || member.role === 'CEO' || member.designation === 'Chairman' || member.designation === 'CEO' ? 'Contact Office' : 'Contact Faculty'}</span>
         </a>
-        <span className="text-[11px] text-slate-400">{member.experience.split(" ")[0]} Experience</span>
+        {member.experience && (
+          <span className="text-[11px] text-slate-400">{member.experience.split(" ")[0]} Experience</span>
+        )}
       </div>
     </div>
   );
