@@ -181,6 +181,9 @@ export default function FounderPage() {
                       {member.name}
                     </h3>
                     <p className="text-sm font-bold text-prc-accent">{member.role}</p>
+                    {member.subtitle && (
+                      <p className="text-xs text-slate-600 font-medium">{member.subtitle}</p>
+                    )}
                     {member.qualification && (
                       <p className="text-xs text-slate-600 font-medium">{member.qualification}</p>
                     )}

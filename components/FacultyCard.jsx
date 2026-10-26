@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Mail, GraduationCap, Award } from "lucide-react";
+import { Mail, GraduationCap, Award, Sparkles } from "lucide-react";
 
 export default function FacultyCard({ member }) {
   if (!member) return null;
@@ -35,10 +35,22 @@ export default function FacultyCard({ member }) {
           <p className="text-xs font-bold text-prc-accent">
             {member.designation}
           </p>
+          {member.subtitle && (
+            <div className="flex items-start gap-1.5 text-xs text-slate-600 font-medium pt-1">
+              <Sparkles className="w-3.5 h-3.5 text-prc-primary shrink-0 mt-0.5" />
+              <span className="line-clamp-2">{member.subtitle}</span>
+            </div>
+          )}
           {member.qualification && (
             <div className="flex items-start gap-1.5 text-xs text-slate-600 pt-1">
               <GraduationCap className="w-4 h-4 text-prc-primary shrink-0 mt-0.5" />
               <span className="line-clamp-2">{member.qualification}</span>
+            </div>
+          )}
+          {member.experience && !member.bio && (
+            <div className="flex items-start gap-1.5 text-xs text-slate-500 pt-0.5">
+              <Award className="w-4 h-4 text-prc-accent shrink-0 mt-0.5" />
+              <span className="line-clamp-2">{member.experience}</span>
             </div>
           )}
           {member.bio && (

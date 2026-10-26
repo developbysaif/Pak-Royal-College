@@ -39,11 +39,14 @@ export const leadership = {
     {
       name: "Ms. Saher Umer",
       role: "Chairman",
+      subtitle: "Patron-in-Chief & Visionary Leader",
       image: "/images/miss_seher.jpg"
     },
     {
       name: "Muhammad Umer Watto",
       role: "CEO",
+      qualification: "MS Systems Engineering",
+      experience: "20+ Years Institutional Management",
       image: "/images/umer_watto.jpg"
     }
   ]

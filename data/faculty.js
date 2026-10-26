@@ -6,6 +6,7 @@ export const faculty = [
     designation: "Chairman",
     department: "Executive Leadership",
     role: "Chairman",
+    subtitle: "Patron-in-Chief & Visionary Leader",
     image: "/images/miss_seher.jpg",
     email: "chairman@pakroyalcollege.edu.pk",
     specialization: ["Strategic Planning", "Institutional Governance", "Academic Leadership"]
@@ -17,6 +18,8 @@ export const faculty = [
     designation: "CEO",
     department: "Executive Leadership",
     role: "CEO",
+    qualification: "MS Systems Engineering",
+    experience: "20+ Years Institutional Management",
     image: "/images/umer_watto.jpg",
     email: "ceo@pakroyalcollege.edu.pk",
     specialization: ["Executive Leadership", "Industry Partnerships", "Operations Management"]
