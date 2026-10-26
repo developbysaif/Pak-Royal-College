@@ -1,0 +1,34 @@
+[
+  {
+    "id": "PRC-2026-427012",
+    "applicationId": "PRC-2026-427012",
+    "fullName": "Hamza Malik",
+    "fatherName": "Muhammad Malik",
+    "dob": "",
+    "gender": "Male",
+    "cnic": "35202-7654321-3",
+    "phone": "0312-3456789",
+    "email": "hamza.malik@outlook.com",
+    "address": "",
+    "city": "Lahore",
+    "lastDegree": "ICS",
+    "institution": "Government College Lahore",
+    "board": "BISE Lahore",
+    "passingYear": "2026",
+    "totalMarks": "1100",
+    "obtainedMarks": "980",
+    "percentage": "89.1%",
+    "programType": "bs",
+    "selectedProgram": "bs-artificial-intelligence",
+    "studyShift": "Morning",
+    "scholarshipCategory": "None",
+    "documentsStatus": {
+      "photoUploaded": true,
+      "cnicUploaded": true,
+      "transcriptUploaded": true
+    },
+    "termsAgreed": true,
+    "_id": "6adf0e2f1c034063090d8fb7",
+    "submittedAt": "2026-10-26T08:24:15.771Z"
+  }
+]

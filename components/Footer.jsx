@@ -406,6 +406,9 @@ export default function Footer() {
             <Link href="/contact" className="hover:text-slate-300 transition-colors">
               Contact
             </Link>
+            <Link href="/admin" className="text-blue-400/80 hover:text-blue-300 transition-colors font-medium">
+              Admin Portal
+            </Link>
           </div>
         </div>
       </div>

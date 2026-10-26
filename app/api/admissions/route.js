@@ -1,5 +1,11 @@
 import { NextResponse } from "next/server";
-import { saveAdmissionApplication, getAdmissionApplications, getAdmissionById } from "@/lib/storage";
+import {
+  saveAdmissionApplication,
+  getAdmissionApplications,
+  getAdmissionById
+} from "@/lib/storage";
+import { connectToDatabase } from "@/lib/mongodb";
+import Admission from "@/models/Admission";
 
 export async function POST(request) {
   try {
@@ -18,7 +24,7 @@ export async function POST(request) {
       );
     }
 
-    // Generate verified unique application tracking ID
+    // Generate unique application tracking ID
     const generatedId = `PRC-2026-${Math.floor(100000 + Math.random() * 900000)}`;
 
     const applicationRecord = await saveAdmissionApplication({
@@ -54,8 +60,8 @@ export async function POST(request) {
     return NextResponse.json(
       {
         success: true,
-        message: "Admission application submitted successfully to Pak Royal College backend.",
-        applicationId: applicationRecord.id,
+        message: "Admission application submitted successfully to MongoDB database.",
+        applicationId: applicationRecord.applicationId || applicationRecord.id,
         data: applicationRecord
       },
       { status: 201 }
@@ -65,7 +71,7 @@ export async function POST(request) {
     return NextResponse.json(
       {
         success: false,
-        error: "Internal server error while processing admission application."
+        error: error.message || "Internal server error while processing admission application."
       },
       { status: 500 }
     );
@@ -98,6 +104,46 @@ export async function GET(request) {
     console.error("Admissions GET API Error:", error);
     return NextResponse.json(
       { success: false, error: "Failed to retrieve admissions data." },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(request) {
+  try {
+    await connectToDatabase();
+    const body = await request.json();
+    const { applicationId, status, adminNotes } = body;
+
+    if (!applicationId) {
+      return NextResponse.json(
+        { success: false, error: "Application ID is required" },
+        { status: 400 }
+      );
+    }
+
+    const updated = await Admission.findOneAndUpdate(
+      { applicationId },
+      { ...(status && { status }), ...(adminNotes !== undefined && { adminNotes }) },
+      { new: true }
+    );
+
+    if (!updated) {
+      return NextResponse.json(
+        { success: false, error: "Application not found" },
+        { status: 404 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Application status updated successfully",
+      application: updated
+    });
+  } catch (error) {
+    console.error("Admissions PATCH Error:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to update application" },
       { status: 500 }
     );
   }

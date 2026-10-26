@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { saveContactMessage, getContactMessages } from "@/lib/storage";
+import { connectToDatabase } from "@/lib/mongodb";
+import Contact from "@/models/Contact";
 
 export async function POST(request) {
   try {
@@ -20,15 +22,15 @@ export async function POST(request) {
       name: name.trim(),
       email: email.trim().toLowerCase(),
       phone: body.phone ? body.phone.trim() : "",
-      subject: body.subject || "General Admissions Inquiry",
+      subject: body.subject ? body.subject.trim() : "General Admissions Inquiry",
       message: message.trim()
     });
 
     return NextResponse.json(
       {
         success: true,
-        message: "Your inquiry has been received. Our admissions team will contact you shortly.",
-        inquiryId: savedRecord.id
+        message: "Your inquiry has been received and saved to MongoDB. Our admissions team will contact you shortly.",
+        inquiryId: savedRecord.id || savedRecord._id
       },
       { status: 201 }
     );
@@ -37,7 +39,7 @@ export async function POST(request) {
     return NextResponse.json(
       {
         success: false,
-        error: "Internal server error while saving contact message."
+        error: error.message || "Internal server error while saving contact message."
       },
       { status: 500 }
     );
@@ -56,6 +58,39 @@ export async function GET() {
     console.error("Contact GET API Error:", error);
     return NextResponse.json(
       { success: false, error: "Failed to retrieve messages." },
+      { status: 500 }
+    );
+  }
+}
+
+export async function PATCH(request) {
+  try {
+    await connectToDatabase();
+    const body = await request.json();
+    const { id, status } = body;
+
+    if (!id || !status) {
+      return NextResponse.json(
+        { success: false, error: "Inquiry ID and status are required." },
+        { status: 400 }
+      );
+    }
+
+    const updated = await Contact.findByIdAndUpdate(
+      id,
+      { status },
+      { new: true }
+    );
+
+    return NextResponse.json({
+      success: true,
+      message: "Contact inquiry status updated successfully",
+      contact: updated
+    });
+  } catch (error) {
+    console.error("Contact PATCH Error:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to update contact inquiry." },
       { status: 500 }
     );
   }

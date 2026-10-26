@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { saveNewsletterSubscriber } from "@/lib/storage";
+import { saveNewsletterSubscriber, getNewsletterSubscribers } from "@/lib/storage";
 
 export async function POST(request) {
   try {
@@ -25,14 +25,31 @@ export async function POST(request) {
     return NextResponse.json(
       {
         success: true,
-        message: "Thank you for subscribing to Pak Royal College admissions and campus updates."
+        message: "Thank you for subscribing! Your email has been saved to the Pak Royal College database."
       },
       { status: 201 }
     );
   } catch (error) {
     console.error("Newsletter API Error:", error);
     return NextResponse.json(
-      { success: false, error: "Internal server error while subscribing." },
+      { success: false, error: error.message || "Internal server error while subscribing." },
+      { status: 500 }
+    );
+  }
+}
+
+export async function GET() {
+  try {
+    const subscribers = await getNewsletterSubscribers();
+    return NextResponse.json({
+      success: true,
+      count: subscribers.length,
+      subscribers
+    });
+  } catch (error) {
+    console.error("Newsletter GET API Error:", error);
+    return NextResponse.json(
+      { success: false, error: "Failed to retrieve subscribers." },
       { status: 500 }
     );
   }
